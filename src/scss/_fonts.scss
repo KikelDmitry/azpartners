@@ -1,0 +1,53 @@
+$font-exo: (
+	("Exo-Thin", 100, normal)
+	("Exo-ThinItalic", 100, italic)
+	("Exo-ExtraLight", 200, normal)
+	("Exo-ExtraLightItalic", 200, italic)
+	("Exo-Light", 300, normal)
+	("Exo-LightItalic", 300, italic)
+	("Exo-Regular", normal, normal)
+	("Exo-Italic", normal, italic)
+	("Exo-Medium", 500, normal)
+	("Exo-MediumItalic", 500, italic)
+	("Exo-SemiBold", 600, normal)
+	("Exo-SemiBoldItalic", 600, italic)
+	("Exo-Bold", 700, normal)
+	("Exo-BoldItalic", 700, italic)
+	("Exo-ExtraBold", 800, normal)
+	("Exo-ExtraBoldItalic", 800, italic)
+	("Exo-Black", 900, normal)
+	("Exo-BlackItalic", 900, italic)
+);
+
+@each $name, $weight, $style in $font-exo {
+	@font-face {
+		font-family: "Exo";
+		src: url($font-path + 'exo/' + $name + ".woff2") format("woff2"), url($font-path + $name + ".woff") format("woff");
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+};
+
+$font-lato: (
+	("Lato-Hairline", 100, normal)
+	("Lato-HairlineItalic", 100, italic)
+	("Lato-Light", 300, normal)
+	("Lato-LightItalic", 300, italic)
+	("Lato-Regular", normal, normal)
+	("Lato-Italic", normal, italic)
+	("Lato-Bold", 700, normal)
+	("Lato-BoldItalic", 700, italic)
+	("Lato-Black", 900, normal)
+	("Lato-BlackItalic", 900, italic)
+);
+
+@each $name, $weight, $style in $font-lato {
+	@font-face {
+		font-family: "Lato";
+		src: url($font-path + 'lato/' + $name + ".woff2") format("woff2"), url($font-path + $name + ".woff") format("woff");
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+};
