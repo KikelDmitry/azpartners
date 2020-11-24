@@ -1,0 +1,47 @@
+.hero {
+	min-height: 500px;
+	color: $color-white;
+
+	// home page
+	&--home {
+		background-color: #010001;
+		position: relative;
+		overflow: hidden;
+
+		.hero__subtitle {
+			font-size: 24px;
+			line-height: 125%;
+		}
+	}
+	&__content {
+		position: relative;
+		z-index: 2;
+	}
+	&__inner {
+		min-height: 250px;
+	}
+	&__top {
+	}
+	&__title {
+		line-height: 125%;
+		margin-bottom: 0;
+	}
+	&__subtitle {
+		color: $color-steel-9;
+		font-weight: 500;
+	}
+	&__bottom {
+		background-color: rgba(49, 77, 85, 0.5);
+	}
+	&__video {
+		position: absolute;
+		top: 0;
+		left: -5%;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		width: 130%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

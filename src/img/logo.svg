@@ -5,10 +5,10 @@
 </mask>
 <g mask="url(#mask0)">
 <g opacity="0.7">
-<ellipse cx="60.2864" cy="23.1842" rx="26.6811" ry="25.2379" fill="#B7870B"/>
-<ellipse cx="60.2864" cy="23.1842" rx="26.6811" ry="25.2379" fill="url(#paint0_linear)" style="mix-blend-mode:overlay"/>
-<ellipse cx="71.8289" cy="35.6758" rx="16.5" ry="15.6075" fill="#3D3931" fill-opacity="0.75"/>
-<ellipse cx="71.8289" cy="35.6758" rx="16.5" ry="15.6075" fill="url(#paint1_linear)" style="mix-blend-mode:overlay"/>
+<ellipse cx="60.2866" cy="23.1842" rx="26.6811" ry="25.2379" fill="#B7870B"/>
+<ellipse cx="60.2866" cy="23.1842" rx="26.6811" ry="25.2379" fill="url(#paint0_linear)" style="mix-blend-mode:overlay"/>
+<ellipse cx="71.8291" cy="35.6758" rx="16.5" ry="15.6075" fill="#3D3931" fill-opacity="0.75"/>
+<ellipse cx="71.8291" cy="35.6758" rx="16.5" ry="15.6075" fill="url(#paint1_linear)" style="mix-blend-mode:overlay"/>
 </g>
 <rect x="12.2246" y="12.5" width="45.5512" height="23" fill="url(#pattern0)"/>
 </g>
@@ -25,11 +25,11 @@
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0" transform="scale(0.00246305 0.00487805)"/>
 </pattern>
-<linearGradient id="paint0_linear" x1="80.9284" y1="-2.05371" x2="62.3887" y2="28.7882" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear" x1="80.9286" y1="-2.05371" x2="62.3889" y2="28.7882" gradientUnits="userSpaceOnUse">
 <stop stop-color="white"/>
 <stop offset="1" stop-color="#894848" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint1_linear" x1="84.5942" y1="20.0684" x2="73.129" y2="39.1414" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear" x1="84.5944" y1="20.0684" x2="73.1292" y2="39.1414" gradientUnits="userSpaceOnUse">
 <stop stop-color="white"/>
 <stop offset="1" stop-color="#894848" stop-opacity="0"/>
 </linearGradient>

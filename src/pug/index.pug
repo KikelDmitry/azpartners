@@ -4,3 +4,30 @@ block meta
 	- config.page.title = 'Home page';
 	- config.page.description = 'Home page description';
 
+	-
+		var hero = {
+			title: 'Targeted content delivery platform',
+			subtitle: 'Content delivery and monetization solutions for software developers and web-masters.',
+			advantages: [
+
+			]
+		};
+
+block hero
+	section.hero.hero--home
+		.hero__content
+				.hero__top
+					.container
+						.hero__inner.row.align-items-center
+							.col-12.col-xl-4
+								h1.hero__title.title-1 #{hero.title}
+							.col-12.col-xl-5
+								.hero__subtitle #{hero.subtitle}
+				.hero__bottom
+					.container
+						.hero__inner.row.align-items-center
+							each item in hero.advantages
+								.col-12.col-xl-4
+		video.hero__video(autoplay muted loop playsinline poster="/img/world_poster.jpg")
+			source(src="/video/world.webm" type="video/webm")
+			source(src="/video/world2.mp4" type="video/mp4")

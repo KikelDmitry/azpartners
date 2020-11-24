@@ -8,5 +8,8 @@ html(lang=config.lang)
 		include /_includes/head.pug
 		
 	body
-		block content
+		include /_includes/header.pug
+		block hero
+		main.main
+		include /_includes/footer.pug
 		include /_includes/scripts.pug

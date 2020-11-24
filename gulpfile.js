@@ -44,6 +44,7 @@ const globs = {
 	js: config.src + 'js/**/*.js',
 	images: [
 		config.src + 'img/**/*.{png,jpg,jpeg,svg,gif}',
+		'!' + config.src + 'img/sprite/**/*.svg'
 	],
 	sprite: config.src + 'img/sprite/**/*.svg',
 	static: [
@@ -112,7 +113,7 @@ const images = () => {
 				imagemin.optipng({ optimizationLevel: 5 }),
 				imagemin.svgo({
 					plugins: [
-						{ removeViewBox: true },
+						// { removeViewBox: true },
 						{ cleanupIDs: false }
 					]
 				})
@@ -155,6 +156,7 @@ const watcher = () => {
 	watch(globs.js, scripts)
 	watch(globs.images, images)
 	watch(globs.sprite, svgsprite)
+	watch(globs.static, copy)
 };
 
 
@@ -172,7 +174,7 @@ exports.build = series(
 		scss,
 		scripts,
 		images,
-		// fonts,
+		svgsprite,
 		copy
 	)
 );

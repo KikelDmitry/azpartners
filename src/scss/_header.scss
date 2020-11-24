@@ -1,0 +1,67 @@
+.header {
+	background-color: $color-steel-deep-2;
+	
+	&__inner {
+		min-height: 72px;
+	}
+	&__logo {
+	}
+	&__menu {
+	}
+	&__login {
+	}
+}
+.main-menu {
+	&__list {
+		display: flex;
+		margin-bottom: 0;
+	}
+	&__item {
+		font-size: 18px;
+		font-weight: 500;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+		&.is-active {
+			.main-menu__link {
+				color: $color-steel-5;
+			}
+		}
+	}
+	&__link {
+		color: $color-white;
+		transition: color 200ms;
+
+		&:hover {
+			color: $color-steel-5;
+			text-decoration: none;
+		}
+	}
+}
+.header-login {
+	display: flex;
+	justify-content: flex-end;
+
+	&__link {
+		display: flex;
+		align-items: center;
+		color: $color-white;
+		transition: color 200ms;
+
+		&:hover {
+			color: $color-steel-5;
+			text-decoration: none;
+		}
+	}
+	&__icon {
+		width: 24px;
+		height: 24px;
+		margin-right: 10px;
+		fill: $color-steel-5;
+
+	}
+	&__title {
+		font-size: 18px;
+	}
+}
