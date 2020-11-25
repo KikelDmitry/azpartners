@@ -36,7 +36,7 @@
 						each item in footerMenu
 							li.footer-menu__item
 								if item.title == 'Privacy Policy'
-									button.footer-menu__link(type="button") #{item.title}
+									button.footer-menu__link(type="button" data-toggle="modal" data-target="#privacy-policy") #{item.title}
 								else
 									a.footer-menu__link(href=item.url ) #{item.title}
 
