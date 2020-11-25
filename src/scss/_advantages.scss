@@ -1,0 +1,37 @@
+.advantages {
+	&__item {
+
+	}
+}
+.advantage {
+	&--rtl {
+		.advantage__inner {
+			flex-direction: row-reverse;
+		}
+	}
+	&__inner {
+		min-height: 250px;
+	}
+	&__title {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto 0;
+			border: 14px solid transparent;
+			border-left-color: red;
+		}
+	}
+	&__descr {
+
+	}
+	&__icon {
+
+	}
+}
