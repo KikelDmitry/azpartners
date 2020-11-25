@@ -1,0 +1,42 @@
+-
+	var footerMenu = [
+		{
+			title: 'Privacy Policy',
+			url: '#',
+		},
+		{
+			title: 'Developers',
+			url: '/developers.html',
+		},
+		{
+			title: 'Publishers',
+			url: '/publishers.html',
+		},
+		{
+			title: 'Advertisers',
+			url: '/advertisers.html',
+		},
+		{
+			title: 'Contact Us',
+			url: '/contact.html',
+		},
+	];
+.footer
+	.container
+		.footer__inner.row.align-items-center
+			.col-12.col-xl-4
+				.footer__copy.footer-copy
+					span.footer-copy__icon ©
+					span.footer-copy__text AzPartners
+					span.footer-copy__year 2020
+					
+			.col-12.col-xl-6
+				nav.footer__menu.footer-menu
+					ul.footer-menu__list.list-unstyled
+						each item in footerMenu
+							li.footer-menu__item
+								if item.title == 'Privacy Policy'
+									button.footer-menu__link(type="button") #{item.title}
+								else
+									a.footer-menu__link(href=item.url ) #{item.title}
+
