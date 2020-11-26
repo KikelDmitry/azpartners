@@ -21,8 +21,12 @@ header.header
 	.container
 		.header__inner.row.align-items-center
 			.col-12.col-xl-4
-				.header__logo
-					img(src="/img/logo.svg" alt="azparnters logo")
+				if config.page.title !== 'Home page'
+					a.header__logo(href="/")
+						img(src="/img/logo.svg" alt="azparnters logo")
+				else
+					.header__logo 
+						img(src="/img/logo.svg" alt="azparnters logo")
 			.col-12.col-xl-5
 				nav.header__menu.main-menu
 					ul.main-menu__list.list-unstyled

@@ -1,22 +1,28 @@
 .advantages {
 	&__item {
-
 	}
 }
 .advantage {
-	&--rtl {
-		.advantage__inner {
-			flex-direction: row-reverse;
-		}
-	}
-	&__inner {
+	background-size: 30% 100%;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(to right, $color-steel-9, $color-steel-9);
+
+	&__title,
+	&__descr,
+	&__icon {
+		display: flex;
+		align-items: center;
 		min-height: 250px;
 	}
 	&__title {
+		margin: 0;
+		padding-right: 30px;
 		position: relative;
+		background-color: $color-steel-9;
+		border-color: $color-steel-9;
 
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			width: 0;
 			height: 0;
@@ -25,13 +31,71 @@
 			bottom: 0;
 			margin: auto 0;
 			border: 14px solid transparent;
-			border-left-color: red;
+			border-left-color: inherit;
+			transform: translateX(100%);
 		}
 	}
 	&__descr {
-
+		padding: 0 20px;
 	}
 	&__icon {
+		justify-content: center;
 
+		svg {
+			width: auto;
+			height: 160px;
+		}
+	}
+
+	// direction
+	&--rtl {
+		background-position: top right;
+
+		.advantage__inner {
+			flex-direction: row-reverse;
+		}
+		.advantage__title {
+			padding-left: 30px;
+			padding-right: 15px;
+
+			&::after {
+				right: auto;
+				left: 0;
+				border-left-color: transparent;
+				border-right-color: inherit;
+				transform: translateX(-100%);
+			}
+		}
+	}
+
+	// colors
+	&--light-gray {
+		background-image: linear-gradient(to right, $color-steel-85, $color-steel-85);
+		background-color: $color-steel-8;
+
+		.advantage__title {
+			background-color: $color-steel-85;
+			border-color: $color-steel-85;
+		}
+	}
+	&--dark-gray {
+		background-image: linear-gradient(to right, $color-steel-deep-4, $color-steel-deep-4);
+		background-color: $color-steel-deep-3;
+		color: $color-white;
+
+		.advantage__title {
+			background-color: $color-steel-deep-4;
+			border-color: $color-steel-deep-4;
+		}
+	}
+	&--amber {
+		background-image: linear-gradient(to right, $color-amber-5, $color-amber-5);
+		background-color: $color-amber-6;
+		color: $color-white;
+
+		.advantage__title {
+			background-color: $color-amber-5;
+			border-color: $color-amber-5;
+		}
 	}
 }

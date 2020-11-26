@@ -28,7 +28,8 @@ block meta
 			{
 				title: 'Attract new users',
 				descr: 'Draw new interested audiences.',
-				icon: 'new-users',
+				icon: 'attract-new-users',
+				color: 'light-gray',
 			},
 			{
 				title: 'New impressions',
@@ -40,7 +41,14 @@ block meta
 				title: 'New markets',
 				descr: 'Get new users from different countries.',
 				icon: 'new-markets',
+				color: 'amber'
 			},
+		];
+	-
+		var partners = [
+			'Avast',
+			'Opera',
+			'DriverHub',
 		];
 
 block hero
@@ -66,17 +74,16 @@ block hero
 			//- source(src="/video/world.webm" type="video/webm")
 			source(src="/video/world2.mp4" type="video/mp4")
 
-block advantages
-	.advantages
+block append advantages
+	section.partners
 		.container
-			each adv in advantages
-				section.advantages__item.advantage(class=(adv.type == 'rtl' ? 'advantage--rtl' : ''))
-					.advantage__inner.row.align-items-center
-						.col-4
-							h2.advantage__title.title-1 #{adv.title}
-						.col-4
-							.advantage__descr #{adv.descr}
-						.col-4
-							.advantage__icon
-								+svg(false, adv.icon, false, false)
-	
+			.partners__inner.row.align-items-center
+				.col-12.col-xl-4
+					h2.partners__title.title-2 Partners
+				.col-12.col-xl-8
+					ul.partners__list.list-unstyled
+						each partner in partners
+							li.partners__item
+								img(src="/img/content/partners/" + partner.toLowerCase() + '.png' alt=partner)
+
+					

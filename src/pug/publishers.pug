@@ -1,0 +1,53 @@
+extends /_layout/promo.pug
+
+block meta
+	- config.page.title = 'Publishers';
+	- config.page.description = 'Publishers page description';
+
+	-
+		var hero = {
+			classPostfix: 'pub',
+			title: 'Publishers',
+			subtitle: 'App delivery and monetization for software developers and publishers.',
+			icons: [
+				{
+					title: 'Cookieless tracking',
+					icon: 'cookieless-tracking',
+				},
+				{
+					title: 'Innovative tools',
+					icon: 'innovative-tools',
+				},
+				{
+					title: 'Industry expierence since',
+					icon: 'industry-expierence-since_violet',
+				},
+			],
+			button: {
+				title: 'Apply',
+				link: '/signup.html',
+			}
+		};
+	-
+		var advantages = [
+			{
+				title: 'Monetization models',
+				descr: 'CPA, CPI, RevShare, Hybrid.',
+				icon: 'monetization-models',
+				type: 'rtl',
+			},
+			{
+				title: 'Smart targeting',
+				descr: 'Display ads only to your target audience.',
+				icon: 'smart-targeting',
+				color: 'light-gray',
+			},
+			{
+				title: 'Verified advertisers only',
+				descr: 'No risks to your image or other areas.',
+				icon: 'verified-advertisers-only',
+				type: 'rtl',
+			},
+		];
+
+		

@@ -5,33 +5,120 @@
 	// home page
 	&--home {
 		background-color: #010001;
+		background-color: $color-steel-deep-2;
 		position: relative;
 		overflow: hidden;
 
+		.hero__inner {
+			min-height: 250px;
+		}
+		.hero__top,
+		.hero__bottom {
+			min-height: 250px;
+		}
+		.hero__bottom {
+			background-color: rgba(49, 77, 85, 0.5);
+		}
+		.hero__title {
+			margin-bottom: 0;
+		}
 		.hero__subtitle {
 			font-size: 24px;
-			line-height: 125%;
+		}
+	}
+
+	// developers page
+	&--dev {
+		.hero__top {
+			background-color: $color-steel-deep-1;
+			background-image: url(#{$img-path}/hero_dev.png);
+		}
+	}
+	&--pub {
+		.hero__top {
+			background-color: $color-steel-deep-1;
+			background-image: url(#{$img-path}/hero_pub.png);
 		}
 	}
 	&__content {
 		position: relative;
 		z-index: 2;
 	}
-	&__inner {
-		min-height: 250px;
-	}
 	&__top {
+		min-height: 200px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+
+		.hero__inner {
+			min-height: 200px;
+		}
 	}
 	&__title {
 		line-height: 125%;
-		margin-bottom: 0;
+		margin-bottom: 10px;
 	}
 	&__subtitle {
 		color: $color-steel-9;
+		line-height: 125%;
 		font-weight: 500;
 	}
+	&__link {
+		display: flex;
+		height: 90px;
+		border: 3px solid $color-steel-3;
+		border-radius: 5px;
+		transition-property: color, border-color, background-color;
+		transition-duration: 200ms;
+
+		&-icon {
+			flex: 0 0 auto;
+			width: 80px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: rgba(96, 125, 139, 0.25);
+			color: $color-amber-12;
+			transition: inherit;
+		}
+		&-title {
+			flex: 1 1 auto;
+			display: flex;
+			align-items: center;
+			padding-left: 23px;
+			padding-right: 36px;
+			color: $color-white;
+			font-size: 28px;
+			font-weight: 600;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			transition: inherit;
+		}
+		&:hover {
+			border-color: $color-steel-9;
+
+			.hero__link-icon {
+				color: $color-white;
+			}
+		}
+		&:active {
+			border-color: $color-amber-12;
+
+			.hero__link-icon {
+				background-color: $color-amber-12;
+				color: $color-white;
+			}
+		}
+	}
 	&__bottom {
-		background-color: rgba(49, 77, 85, 0.5);
+		min-height: 300px;
+		background-color: $grad-gray;
+		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 50%);
+		background-blend-mode: overlay, normal;
+
+		.hero__inner {
+			min-height: 300px;
+		}
 	}
 	&__video {
 		position: absolute;
@@ -43,6 +130,26 @@
 		width: 130%;
 		height: 100%;
 		object-fit: cover;
+		opacity: 0.33;
+	}
+}
+.hero-promo {
+	position: relative;
+	height: 205px;
+	display: flex;
+
+	&__title {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: calc(75% + 34px);
+		line-height: 1;
+		margin: 0;
+	}
+	&__icon {
+		width: 160px;
+		height: 160px;
+		margin: auto auto 0 auto;
 	}
 }
 .community-group {

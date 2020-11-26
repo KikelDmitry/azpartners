@@ -1,0 +1,22 @@
+section.hero(class=(hero.classPostfix ? 'hero--' + hero.classPostfix : ''))
+	.hero__content
+			.hero__top
+				.container
+					.hero__inner.row.align-items-center
+						.col-12.col-xl-8
+							h1.hero__title.title-1 #{hero.title}
+							.hero__subtitle #{hero.subtitle}
+						.col-12.col-md-6.col-xl-4
+							a.hero__link(href=hero.button.link)
+								span.hero__link-icon X
+								span.hero__link-title #{hero.button.title}
+			.hero__bottom
+				.container
+					.hero__inner.row.align-items-center
+						each item in hero.icons
+							.col-12.col-xl-4
+								.hero-promo
+									h2.hero-promo__title.title-2 #{item.title}
+									.hero-promo__icon
+										+svg(false, item.icon, item.title, false)
+

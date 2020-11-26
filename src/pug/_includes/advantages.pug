@@ -1,0 +1,12 @@
+.advantages
+	each adv in advantages
+		section.advantages__item.advantage(class=(adv.type == 'rtl' ? 'advantage--rtl' : '') class=(adv.color ? 'advantage--' + adv.color : ''))
+			.container
+				.advantage__inner.row.align-items-center
+					.col-4
+						h2.advantage__title.title-2 #{adv.title}
+					.col-4
+						.advantage__descr #{adv.descr}
+					.col-4
+						.advantage__icon
+							+svg(false, adv.icon, false, false)

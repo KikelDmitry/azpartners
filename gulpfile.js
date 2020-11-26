@@ -135,13 +135,18 @@ exports.images = images;
 const svgsprite = () => {
 	return src(globs.sprite)
 		.pipe(svgmin({
-			js2svg: {
-				pretty: true
-			}
+			plugins: [
+				{
+					removeUnknownsAndDefaults: false,
+				},
+				{ 
+					cleanupIDs: false
+				}
+			]
 		}))
 		.pipe(gulpSvgSprite({
 			mode: {
-				symbol: {
+				stack: {
 					sprite: '../sprite.svg'  //sprite file name
 				}
 			},
