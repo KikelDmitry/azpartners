@@ -134,16 +134,19 @@ const svgsprite = () => {
 		.pipe(svgmin({
 			plugins: [
 				{
-					removeUnknownsAndDefaults: false,
+					removeXMLNS: true
 				},
-				{
-					cleanupIDs: false
-				}
+				// {
+				// 	removeUnknownsAndDefaults: false
+				// },
+				// {
+				// 	cleanupIDs: false
+				// }
 			]
 		}))
 		.pipe(gulpSvgSprite({
 			mode: {
-				stack: {
+				symbol: {
 					sprite: '../sprite.svg'  //sprite file name
 				}
 			},

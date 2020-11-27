@@ -1,0 +1,26 @@
+.main-menu {
+	&__list {
+		display: flex;
+		margin-bottom: 0;
+	}
+	&__item {
+		font-weight: 500;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+		&.is-active {
+			.main-menu__link {
+				color: $color-steel-5;
+			}
+		}
+	}
+	&__link {
+		white-space: nowrap;
+		transition: color 200ms;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

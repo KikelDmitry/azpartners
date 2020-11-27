@@ -9,4 +9,5 @@
 						.advantage__descr #{adv.descr}
 					.col-4
 						.advantage__icon
-							+svg(false, adv.icon, false, false)
+							//- img(src="/img/" + adv.icon + ".svg", alt=adv.title)
+							+svg(false, adv.icon, false, adv.title + ' icon')

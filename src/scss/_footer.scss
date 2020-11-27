@@ -25,31 +25,19 @@
 		color: $color-steel-5;
 	}
 }
-.footer-menu {
-	&__list {
-		display: flex;
-		margin-bottom: 0;
-	}
-	&__item {
-		font-weight: 500;
-
-		&:not(:last-child) {
-			margin-right: 20px;
-		}
+.footer__menu {
+	.main-menu__item {
 		&.is-active {
 			.main-menu__link {
 				color: $color-steel-5;
 			}
 		}
 	}
-	&__link {
+	.main-menu__link {
 		color: $color-blue-4;
-		white-space: nowrap;
-		transition: color 200ms;
 
 		&:hover {
 			color: $color-steel-6;
-			text-decoration: none;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 .header {
 	background-color: $color-steel-deep-2;
-	
+
 	&__inner {
 		min-height: 72px;
 	}
@@ -13,30 +13,19 @@
 	&__login {
 	}
 }
-.main-menu {
-	&__list {
-		display: flex;
-		margin-bottom: 0;
-	}
-	&__item {
-		font-weight: 500;
-
-		&:not(:last-child) {
-			margin-right: 20px;
-		}
+.header__menu {
+	.main-menu__item {
 		&.is-active {
-			.main-menu__link {
+			.header-menu__link {
 				color: $color-steel-5;
 			}
 		}
 	}
-	&__link {
+	.main-menu__link {
 		color: $color-white;
-		transition: color 200ms;
 
 		&:hover {
 			color: $color-steel-5;
-			text-decoration: none;
 		}
 	}
 }
@@ -57,7 +46,7 @@
 	}
 	&__icon {
 		padding-right: 10px;
-		color: #78909C;
+		color: #78909c;
 		font-size: 24px;
 	}
 	&__title {
