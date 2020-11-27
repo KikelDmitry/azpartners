@@ -1,0 +1,29 @@
+.hero {
+	&--light {
+		min-height: 430px;
+		position: relative;
+
+		.hero__title {
+			margin-top: 65px;
+			margin-bottom: 0;
+		}
+		.hero__subtitle {
+			display: flex;
+			align-items: center;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			min-height: 90px;
+			padding: 0.6em 0;
+			background-color: rgba(29, 57, 65, 0.66);
+		}
+	}
+	&--contact {
+		background-color: $color-steel-deep-2;
+		background-image: url(#{$img-path}/hero_contact.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+}

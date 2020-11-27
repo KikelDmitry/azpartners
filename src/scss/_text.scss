@@ -1,9 +1,9 @@
 .main {
 	&__header {
 		background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 2.08%),
-		linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), #b5a15b;
+			linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), #b5a15b;
 		background-blend-mode: overlay, normal, normal;
-		
+
 		&-inner {
 			min-height: 100px;
 			display: flex;
@@ -19,7 +19,7 @@
 		line-height: 1;
 
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -27,7 +27,7 @@
 			width: 300px;
 			background-color: inherit;
 			transform: translateX(-100%);
-			
+
 			@include media-breakpoint-up(xl) {
 				width: 1100px;
 			}
