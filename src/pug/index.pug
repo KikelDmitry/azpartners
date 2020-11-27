@@ -9,18 +9,9 @@ block meta
 			title: 'Targeted content delivery platform',
 			subtitle: 'Content delivery and monetization solutions for software developers and web-masters.',
 			community: [
-				{
-					icon: '',
-					title: 'Developers',
-			},
-				{
-					icon: '',
-					title: 'Publishers',
-				},
-				{
-					icon: '',
-					title: 'Advertisers',
-				},
+				'Developers',
+				'Publishers',
+				'Advertisers',
 			]
 		};
 	-
@@ -66,10 +57,10 @@ block hero
 						.hero__inner.row.align-items-center
 							each item in hero.community
 								.col-12.col-xl-4
-									.community-group(class="community-group--" + item.title.toLowerCase())
-										a.community-group__title(href="/" + item.title.toLowerCase() + ".html") #{item.title}
-										.community-group__icon
-											+svg('', item.title.toLowerCase() + '-icon', false, false)
+									.community-group(class="community-group--" + item.toLowerCase())
+										a.community-group__title(href="/" + item.toLowerCase() + ".html") #{item}
+										i.community-group__icon(class="icon-" + item.toLowerCase())
+
 		video.hero__video(autoplay muted loop playsinline poster="/img/world_poster.jpg")
 			//- source(src="/video/world.webm" type="video/webm")
 			source(src="/video/world2.mp4" type="video/mp4")

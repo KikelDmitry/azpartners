@@ -1,0 +1,12 @@
+extends /_layout/base.pug
+
+block text
+	.main__header
+		.container
+			.main__header-inner
+				h1.main__title.title-1 #{config.page.title}
+	.main__content
+		.container
+			.content
+				block content
+

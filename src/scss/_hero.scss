@@ -26,18 +26,21 @@
 			font-size: 24px;
 		}
 	}
-
+	
 	// developers page
 	&--dev {
 		.hero__top {
-			background-color: $color-steel-deep-1;
 			background-image: url(#{$img-path}/hero_dev.png);
 		}
 	}
 	&--pub {
 		.hero__top {
-			background-color: $color-steel-deep-1;
 			background-image: url(#{$img-path}/hero_pub.png);
+		}
+	}
+	&--adv {
+		.hero__top {
+			background-image: url(#{$img-path}/hero_adv.png);
 		}
 	}
 	&__content {
@@ -46,6 +49,7 @@
 	}
 	&__top {
 		min-height: 200px;
+		background-color: $color-steel-deep-1;
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
@@ -79,6 +83,7 @@
 			align-items: center;
 			background-color: rgba(96, 125, 139, 0.25);
 			color: $color-amber-12;
+			font-size: 30px;
 			transition: inherit;
 		}
 		&-title {
@@ -106,7 +111,7 @@
 
 			.hero__link-icon {
 				background-color: $color-amber-12;
-				color: $color-white;
+				color: $color-steel-0;
 			}
 		}
 	}
@@ -142,7 +147,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: calc(75% + 34px);
+		// width: calc(75% + 34px);
 		line-height: 1;
 		margin: 0;
 	}
@@ -239,6 +244,7 @@
 		height: 90px;
 		padding: 22px 15px;
 		border-radius: 5px;
+		font-size: 46px;
 		transition: inherit;
 	}
 	&__title {
@@ -262,8 +268,8 @@
 		&:active {
 			color: $color-steel-0;
 
-			& + .community-group__icon svg {
-				fill: $color-steel-0;
+			& + .community-group__icon {
+				color: $color-steel-0;
 			}
 		}
 	}

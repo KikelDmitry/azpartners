@@ -1,0 +1,43 @@
+@font-face {
+	font-family: "icons";
+	src: url($font-path + "icons/icons.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	font-family: "icons" !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-apply::before {
+	content: "\e903";
+}
+.icon-copyright::before {
+	content: "\e904";
+}
+.icon-send::before {
+	content: "\e905";
+}
+.icon-sign-in::before {
+	content: "\e906";
+}
+.icon-developers::before {
+	content: "\e900";
+}
+.icon-advertisers::before {
+	content: "\e901";
+}
+.icon-publishers::before {
+	content: "\e902";
+}

@@ -30,8 +30,6 @@ const gulpSvgSprite = require('gulp-svg-sprite');
 const svgmin = require('gulp-svgmin');
 
 //icons
-const iconfont = require('gulp-iconfont');
-const iconfontCss = require('gulp-iconfont-css');
 
 //CONFIG
 
@@ -52,7 +50,6 @@ const globs = {
 		'!' + config.src + 'img/icons/**/*.*'
 	],
 	sprite: config.src + 'img/sprite/**/*.svg',
-	icons: config.src + 'img/icons/**/*.svg',
 	static: [
 		config.src + 'video/**/*.*',
 		config.src + 'fonts/**/*.*',
@@ -139,7 +136,7 @@ const svgsprite = () => {
 				{
 					removeUnknownsAndDefaults: false,
 				},
-				{ 
+				{
 					cleanupIDs: false
 				}
 			]
@@ -156,28 +153,6 @@ const svgsprite = () => {
 };
 exports.svgsprite = svgsprite;
 
-const icons = () => {
-	return src(globs.icons)
-		.pipe(iconfontCss({
-			fontName: 'icons',
-			path: config.src + 'scss/_iconsTemplate.scss',
-			targetPath: config.src + 'scss/_icons.scss',
-			fontPath: config.dest + 'fonts/icons/'
-		}))
-		.pipe(iconfont({
-			fontName: 'icons',
-			prependUnicode: true,
-			normalize: true,
-			fontHeight: 1001,
-			formats: ['woff', 'woff2', 'ttf']
-		}))
-		.on('glyphs', function (glyphs, options) {
-			// CSS templating, e.g.
-			console.log(glyphs, options);
-		})
-		.pipe(dest(config.dest + 'fonts/icons'));
-}
-exports.icons = icons;
 
 const copy = () => {
 	return src(globs.static, {
@@ -191,7 +166,6 @@ const watcher = () => {
 	watch(globs.js, scripts)
 	watch(globs.images, images)
 	watch(globs.sprite, svgsprite)
-	watch(globs.icons, icons)
 	watch(globs.static, copy)
 };
 

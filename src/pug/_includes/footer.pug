@@ -2,7 +2,7 @@
 	var footerMenu = [
 		{
 			title: 'Privacy Policy',
-			url: '#',
+			url: '/privacy.html',
 		},
 		{
 			title: 'Developers',
@@ -26,7 +26,8 @@
 		.footer__inner.row.align-items-center
 			.col-12.col-xl-4
 				.footer__copy.footer-copy
-					span.footer-copy__icon ©
+					span.footer-copy__icon
+						i.icon-copyright
 					span.footer-copy__text AzPartners
 					span.footer-copy__year 2020
 					
@@ -35,8 +36,5 @@
 					ul.footer-menu__list.list-unstyled
 						each item in footerMenu
 							li.footer-menu__item
-								if item.title == 'Privacy Policy'
-									button.footer-menu__link(type="button" data-toggle="modal" data-target="#privacy-policy") #{item.title}
-								else
-									a.footer-menu__link(href=item.url ) #{item.title}
+								a.footer-menu__link(href=item.url ) #{item.title}
 
