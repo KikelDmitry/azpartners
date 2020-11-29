@@ -10,4 +10,26 @@ block meta
 			title: config.page.title,
 			subtitle: 'Content delivery and monetization solutions for software developers and web-masters.'
 		}
-	
+
+block content
+	form.form
+		.form-group
+			.row
+				.col-1
+					label(for="contact-email") E-mail
+				.col-10
+					input#contact-email(type="email" required placeholder="johndoe@gmail.com")
+					i.icon-asterisk
+		.form-group
+			.row
+				.col-1
+					label(for="contact-name") Name
+				.col-10
+					input#contact-email(type="text" required placeholder="John Doe")
+					i.icon-asterisk
+		.form-group
+			.row
+				.col-1
+					label(for="contact-message") Message
+				.col-10
+					textarea#contact-message

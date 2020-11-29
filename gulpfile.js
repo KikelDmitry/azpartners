@@ -146,7 +146,7 @@ const svgsprite = () => {
 		}))
 		.pipe(gulpSvgSprite({
 			mode: {
-				symbol: {
+				defs: {
 					sprite: '../sprite.svg'  //sprite file name
 				}
 			},

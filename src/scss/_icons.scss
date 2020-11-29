@@ -20,6 +20,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-asterisk::before {
+  content: "\e907";
+}
 .icon-apply::before {
 	content: "\e903";
 }
