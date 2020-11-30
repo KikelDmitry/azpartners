@@ -7,9 +7,8 @@ section.hero(class=(hero.classPostfix ? 'hero--' + hero.classPostfix : ''))
 							h1.hero__title.title-1 #{hero.title}
 							.hero__subtitle #{hero.subtitle}
 						.col-12.col-md-6.col-xl-4
-							a.hero__link(href=hero.button.link)
-								span.hero__link-icon
-									i.icon-apply
+							a.hero__link.btn(href=hero.button.link)
+								i.icon-apply
 								span.hero__link-title #{hero.button.title}
 			.hero__bottom
 				.container

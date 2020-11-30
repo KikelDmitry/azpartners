@@ -12,24 +12,21 @@ block meta
 		}
 
 block content
-	form.form
-		.form-group
-			.row
-				.col-1
+	.row
+		.col-9.offset-1
+			form.form.form--contact
+				.form-group.row
 					label(for="contact-email") E-mail
-				.col-10
 					input#contact-email(type="email" required placeholder="johndoe@gmail.com")
 					i.icon-asterisk
-		.form-group
-			.row
-				.col-1
+				.form-group.row
 					label(for="contact-name") Name
-				.col-10
 					input#contact-email(type="text" required placeholder="John Doe")
 					i.icon-asterisk
-		.form-group
-			.row
-				.col-1
+				.form-group.row
 					label(for="contact-message") Message
-				.col-10
 					textarea#contact-message
+				.form-group.row
+					button.btn(type="submit")
+						i.icon-send
+						span Send

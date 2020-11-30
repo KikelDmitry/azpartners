@@ -71,52 +71,14 @@
 		font-weight: 500;
 	}
 	&__link {
-		display: flex;
 		height: 90px;
-		border: 3px solid $color-steel-3;
-		border-radius: 5px;
-		transition-property: color, border-color, background-color;
-		transition-duration: 200ms;
-
+		
 		&-icon {
-			flex: 0 0 auto;
-			width: 80px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background-color: rgba(96, 125, 139, 0.25);
-			color: $color-amber-12;
-			font-size: 30px;
-			transition: inherit;
 		}
 		&-title {
-			flex: 1 1 auto;
-			display: flex;
-			align-items: center;
-			padding-left: 23px;
-			padding-right: 36px;
 			color: $color-white;
-			font-size: 28px;
-			font-weight: 600;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			transition: inherit;
 		}
-		&:hover {
-			border-color: $color-steel-9;
-
-			.hero__link-icon {
-				color: $color-white;
-			}
-		}
-		&:active {
-			border-color: $color-amber-12;
-
-			.hero__link-icon {
-				background-color: $color-amber-12;
-				color: $color-steel-0;
-			}
-		}
+		
 	}
 	&__bottom {
 		min-height: 300px;
