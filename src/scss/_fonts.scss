@@ -30,16 +30,24 @@ $font-exo: (
 };
 
 $font-lato: (
-	("Lato-Hairline", 100, normal)
-	("Lato-HairlineItalic", 100, italic)
-	("Lato-Light", 300, normal)
-	("Lato-LightItalic", 300, italic)
-	("Lato-Regular", normal, normal)
-	("Lato-Italic", normal, italic)
-	("Lato-Bold", 700, normal)
-	("Lato-BoldItalic", 700, italic)
-	("Lato-Black", 900, normal)
-	("Lato-BlackItalic", 900, italic)
+	("latohairline", 100, normal)
+	("latohairlineitalic", 100, italic)
+	("latothin", 200, normal)
+	("latothinitalic", 200, italic)
+	("latolight", 300, normal)
+	("latolightitalic", 300, italic)
+	("latoregular", normal, normal)
+	("latoitalic", normal, italic)
+	("latomedium", 500, normal)
+	("latomediumitalic", 500, italic)
+	("latosemibold", 600, normal)
+	("latosemibolditalic", 600, italic)
+	("latobold", 700, normal)
+	("latobolditalic", 700, italic)
+	("latoheavy", 800, normal)
+	("latoheavyitalic", 800, italic)
+	("latoblack", 900, normal)
+	("latoblackitalic", 900, italic)
 );
 
 @each $name, $weight, $style in $font-lato {
