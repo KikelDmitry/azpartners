@@ -16,7 +16,7 @@
 		.hero__bottom {
 			min-height: 250px;
 		}
-		.hero__top {
+		.hero__content {
 			background: transparent;
 		}
 		.hero__bottom {
@@ -30,36 +30,80 @@
 		}
 	}
 
-	// developers page
 	&--dev {
-		.hero__top {
-			background-image: url(#{$img-path}/hero_dev.png);
+		.hero__bg {
+			background-image: url(#{$img-path}hero_dev.jpg);
 		}
 	}
 	&--pub {
-		.hero__top {
-			background-image: url(#{$img-path}/hero_pub.png);
+		.hero__bg {
+			background-image: url(#{$img-path}hero_pub.jpg);
 		}
 	}
 	&--adv {
-		.hero__top {
-			background-image: url(#{$img-path}/hero_adv.png);
+		.hero__bg {
+			background-image: url(#{$img-path}hero_adv.jpg);
+		}
+	}
+	&--light {
+		min-height: 430px;
+		position: relative;
+		background-color: rgba(29, 57, 65, 0.15);
+
+		.hero__title {
+			margin-top: 65px;
+			margin-bottom: 0;
+		}
+		.hero__subtitle {
+			display: flex;
+			align-items: center;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			min-height: 90px;
+			padding: 0.6em 0;
+			background-color: rgba(29, 57, 65, 0.66);
+		}
+	}
+	&--contact {
+		.hero__bg {
+			background-image: url(#{$img-path}hero_contact.jpg);
+			opacity: 1;
+		}
+	}
+	&--signup {
+		min-height: 150px;
+		background-color: $color-steel-deep-1;
+
+		.hero__inner {
+			min-height: 150px;
 		}
 	}
 	&__content {
 		position: relative;
 		z-index: 2;
+		background-color: $color-steel-deep-1;
 	}
 	&__top {
+		position: relative;
 		min-height: 200px;
-		background-color: $color-steel-deep-1;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
 
 		.hero__inner {
 			min-height: 200px;
 		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		opacity: 0.33;
+		background-repeat: no-repeat;
+		background-position: center 63%;
+		background-size: cover;
 	}
 	&__title {
 		line-height: 125%;
@@ -72,13 +116,12 @@
 	}
 	&__link {
 		height: 90px;
-		
+
 		&-icon {
 		}
 		&-title {
 			color: $color-white;
 		}
-		
 	}
 	&__bottom {
 		min-height: 300px;

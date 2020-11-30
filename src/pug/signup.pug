@@ -1,0 +1,46 @@
+extends /_layout/login.pug
+
+block meta
+	- config.page.title = 'Sign up';
+	- config.page.description = 'Sign up page description';
+
+	-
+		var hero = {
+			title: config.page.title,
+			subtitle: 'Content delivery and monetization solutions.',
+			tabs: [
+				{
+					title: 'Developer',
+					active: true,
+					description: 'After you fill out the form, we&apos;ll contact you to clarify details and confirm registration.',
+					fields: [
+
+					]
+				},
+				{
+					title: 'Publisher',
+					active: false,
+					description: 'After you fill out the form, we&apos;ll contact you to clarify details and confirm registration.',
+				},
+				{
+					title: 'Advertiser',
+					active: false,
+					description: 'Please tell us about your goals and the product you would like to distribute. After we receive the form, we&apos;ll contact you to confirm registration.',
+				},
+			]	
+		}
+
+block content
+	.signup-options.tab-content
+		each tab in hero.tabs
+
+			- var title = tab.title.toLowerCase();
+
+			.tab-pane.fade(class=(tab.active ? 'show active' : '') id=title role="tabpanel" aria-labelledby=title)
+				.row
+					.col-12.col-xl-6
+						form.form
+					.col-12.col-xl-6
+						.signup-options__description(class="signup-options__description--" + title) !{tab.description}
+
+
