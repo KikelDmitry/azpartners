@@ -1,0 +1,26 @@
+extends /_layout/auth.pug
+
+block meta
+	- config.page.title = '404';
+	- config.page.description = '404 page description';
+
+	-
+		var hero = {
+			classPostfix: '',
+			title: 'Error',
+			subtitle: 'Content delivery and monetization solutions.',
+		}
+
+block content
+	.error-container
+		.row.align-items-center
+			.col-4
+				.error-container__left
+					i.icon-no
+					span.error-container__title
+						span 404
+						|   – Page not found.
+			.col-5
+				.error-container__right
+					.error-container__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+

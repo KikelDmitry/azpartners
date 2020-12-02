@@ -1,5 +1,8 @@
 .main {
+	flex: 1 1 auto;
+	
 	&__header {
+		margin-bottom: 40px;
 		background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 2.08%),
 			linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), #b5a15b;
 		background-blend-mode: overlay, normal, normal;
@@ -35,7 +38,6 @@
 	}
 }
 .content {
-	padding-top: 40px;
 	color: $color-steel-1;
 
 	h2 {

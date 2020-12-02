@@ -1,0 +1,28 @@
+extends /_layout/auth.pug
+
+block meta
+	- config.page.title = 'Sign in';
+	- config.page.description = 'Sign in page description';
+
+	-
+		var hero = {
+			title: config.page.title,
+			subtitle: 'Content delivery and monetization solutions.',
+		}
+
+block content
+	form.form.form--signin
+		+formInput('Email', 'email', 'johndoe@gmail.com', 4, 8)
+		+formInput('Password', 'password', '', 4, 8)
+		+formInput('Confirm password', 'password', '', 4, 8)
+		.form-group.row
+			.col-4
+			.col-8
+				input.custom-control-input(type="checkbox")
+				span Checkbox
+		.form-group.row
+			.col-4
+			.col-8
+				button.btn(type="submit")
+					i.icon-sign-in
+					span Sign in

@@ -20,8 +20,14 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-no::before {
+	content: "\e908";
+}
+.icon-yes::before {
+	content: "\e909";
+}
 .icon-asterisk::before {
-  content: "\e907";
+	content: "\e907";
 }
 .icon-apply::before {
 	content: "\e903";

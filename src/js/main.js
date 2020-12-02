@@ -1,3 +1,10 @@
+let forms = document.querySelectorAll('.form');
+forms.forEach((form) => {
+	form.addEventListener('submit', (e) => {
+		e.preventDefault();
+		alert('submit success')
+	})
+})
 document.addEventListener('DOMContentLoaded', function() {
 	let menuItems = document.querySelectorAll('.main-menu__item');
 	menuItems.forEach((item) => {

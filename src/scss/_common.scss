@@ -69,4 +69,19 @@ body {
 	&:focus {
 		box-shadow: none;
 	}
+	&:disabled {
+		color: $color-steel-7;
+		background-color: $color-gray-9;
+		border-color: $color-gray-9 !important;
+		pointer-events: none;
+
+		i {
+			background-color: inherit;
+			color: inherit;
+		}
+		span {
+			background-color: inherit;
+			color: inherit;
+		}
+	}
 }

@@ -12,21 +12,13 @@ block meta
 		}
 
 block content
-	.row
-		.col-9.offset-1
-			form.form.form--contact
-				.form-group.row
-					label(for="contact-email") E-mail
-					input#contact-email(type="email" required placeholder="johndoe@gmail.com")
-					i.icon-asterisk
-				.form-group.row
-					label(for="contact-name") Name
-					input#contact-email(type="text" required placeholder="John Doe")
-					i.icon-asterisk
-				.form-group.row
-					label(for="contact-message") Message
-					textarea#contact-message
-				.form-group.row
-					button.btn(type="submit")
-						i.icon-send
-						span Send
+	form.form.form--contact
+		+formInput('Email', 'email', 'johndoe@gmail.com', 3, 9)
+		+formInput('Name', 'text', 'John Doe', 3, 9)
+		+formTextarea('Message', 'Hello there!', 3, 9)
+		.form-group.row
+			.col-3
+			.col-9
+				button.btn(type="submit")
+					i.icon-send
+					span Send

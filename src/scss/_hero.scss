@@ -47,6 +47,7 @@
 	}
 	&--light {
 		min-height: 430px;
+		margin-bottom: 50px;
 		position: relative;
 		background-color: rgba(29, 57, 65, 0.15);
 
@@ -72,8 +73,9 @@
 			opacity: 1;
 		}
 	}
-	&--signup {
+	&--thin {
 		min-height: 150px;
+		margin-bottom: 35px;
 		background-color: $color-steel-deep-1;
 
 		.hero__inner {
