@@ -1,11 +1,12 @@
 extends /_layout/base.pug
 
 block meta
-	- var template = 'auth';
+	- config.tmp = 'auth';
 
 block hero
+	include /_includes/hero.pug
 	//- signup/signin hero
-	section.hero.hero--thin
+	//- section.hero.hero--thin
 		.container
 			.hero__inner.row.align-items-center
 				.col-12.col-xl-6

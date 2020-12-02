@@ -1,22 +1,21 @@
 .error-container {
 	border: 2px solid $color-red-12;
 	border-radius: 5px;
+	padding: 22px 26px;
 
 	&__left {
 		display: flex;
 		align-items: center;
-		padding: 22px 26px;
-
-		i {
-			margin-right: 22px;
-			color: $color-red-10;
-			font-size: 48px;
-		}
+	}
+	&__icon {
+		margin-right: 22px;
+		color: $color-red-10;
+		font-size: 48px;
 	}
 	&__title {
 		line-height: 150%;
 		font-weight: 600;
-		
+
 		span {
 			font-weight: 800;
 		}

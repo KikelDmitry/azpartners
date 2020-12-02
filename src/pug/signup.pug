@@ -1,11 +1,12 @@
 extends /_layout/auth.pug
 
-block meta
+block append meta
 	- config.page.title = 'Sign up';
 	- config.page.description = 'Sign up page description';
 
 	-
 		var hero = {
+			classPostfix: 'signup',
 			title: config.page.title,
 			subtitle: 'Content delivery and monetization solutions.',
 			tabs: [
@@ -14,18 +15,22 @@ block meta
 					active: true,
 					description: 'After you fill out the form, we&apos;ll contact you to clarify details and confirm registration.',
 					fields: [
-
-					]
+						{
+							mixin: 'formInput',
+						}
+					],
 				},
 				{
 					title: 'Publisher',
 					active: false,
 					description: 'After you fill out the form, we&apos;ll contact you to clarify details and confirm registration.',
+					fields: [],
 				},
 				{
 					title: 'Advertiser',
 					active: false,
 					description: 'Please tell us about your goals and the product you would like to distribute. After we receive the form, we&apos;ll contact you to confirm registration.',
+					fields: [],
 				},
 			]	
 		}
@@ -40,6 +45,7 @@ block content
 				.row
 					.col-12.col-xl-6
 						form.form
+								
 					.col-12.col-xl-6
 						.signup-options__description(class="signup-options__description--" + title) !{tab.description}
 

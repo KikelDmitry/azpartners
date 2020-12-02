@@ -1,23 +1,81 @@
-section.hero(class=(hero.classPostfix ? 'hero--' + hero.classPostfix : ''))
-	.hero__content
-			.hero__top
-				.container
-					.hero__inner.row.align-items-center
-						.col-12.col-xl-8
-							h1.hero__title.title-1 #{hero.title}
-							.hero__subtitle #{hero.subtitle}
-						.col-12.col-md-6.col-xl-4
-							a.hero__link.btn(href=hero.button.link)
-								i.icon-apply
-								span.hero__link-title #{hero.button.title}
-				.hero__bg
-			.hero__bottom
-				.container
-					.hero__inner.row.align-items-center
-						each item in hero.icons
+//- home page
+if config.page.title == 'Home page'
+	section.hero.hero--home
+		.hero__content
+				.hero__top
+					.container
+						.hero__inner.row.align-items-center
 							.col-12.col-xl-4
-								.hero-promo
-									h2.hero-promo__title.title-2 #{item.title}
-									.hero-promo__icon
-										+svg(false, item.icon, item.title, false)
+								h1.hero__title.title-1 #{hero.title}
+							.col-12.col-xl-5
+								.hero__subtitle #{hero.subtitle}
+				.hero__bottom
+					.container
+						.hero__inner.row.align-items-center
+							each item in hero.community
+								.col-12.col-xl-4
+									.community-group(class="community-group--" + item.toLowerCase())
+										a.community-group__title(href="/" + item.toLowerCase() + ".html") #{item}
+										i.community-group__icon(class="icon-" + item.toLowerCase())
 
+		video.hero__video(autoplay muted loop playsinline poster="/img/world_poster.jpg")
+			//- source(src="/video/world.webm" type="video/webm")
+			source(src="/video/world2.mp4" type="video/mp4")
+
+//- promo template
+if config.tmp == 'promo'
+	section.hero(class=(hero.classPostfix ? 'hero--' + hero.classPostfix : ''))
+			.hero__content
+					.hero__top
+						.container
+							.hero__inner.row.align-items-center
+								.col-12.col-xl-8
+									h1.hero__title.title-1 #{hero.title}
+									.hero__subtitle #{hero.subtitle}
+								.col-12.col-md-6.col-xl-4
+									a.hero__link.btn(href=hero.button.link)
+										i.icon-apply
+										span.hero__link-title #{hero.button.title}
+						.hero__bg
+					.hero__bottom
+						.container
+							.hero__inner.row.align-items-center
+								each item in hero.icons
+									.col-12.col-xl-4
+										.hero-promo
+											h2.hero-promo__title.title-2 #{item.title}
+											.hero-promo__icon
+												+svg(false, item.icon, item.title, false)
+
+//- light template
+if config.tmp == 'light'
+	section.hero.hero--light(class=(hero.classPostfix ? 'hero--' + hero.classPostfix : ''))
+		.container
+			.hero__inner.row.align-items-center
+				.col-12.col-xl-8
+					h1.hero__title.title-1 #{hero.title}
+			.hero__subtitle
+				.container #{hero.subtitle}
+		.hero__bg
+
+//- auth template
+if config.tmp == 'auth'
+
+	//- signup/signin hero
+	section.hero.hero--thin(class=(hero.classPostfix ? 'hero--' + hero.classPostfix : ''))
+		.container
+			.hero__inner.row.align-items-center
+				.col-12.col-xl-6
+					h1.hero__title.title-1 #{hero.title}
+					.hero__subtitle #{hero.subtitle}
+					
+				//- sign up block only
+				if config.page.title == 'Sign up'
+					.col-12.col-xl-6
+						ul.hero__tabs.hero-tabs.nav.nav-tabs#sign-tabs-head(role="tablist")
+							each tab in hero.tabs
+
+								- var title = tab.title.toLowerCase();
+
+								li.hero-tabs__item.nav-item
+									a.hero-tabs__link(href="#" + title data-toggle="tab" class=("hero-tabs__link--" + title && tab.active ? 'active' : '') class="hero-tabs__link--" + title) #{tab.title}

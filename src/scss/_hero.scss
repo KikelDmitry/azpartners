@@ -76,11 +76,17 @@
 	&--thin {
 		min-height: 150px;
 		margin-bottom: 35px;
-		background-color: $color-steel-deep-1;
+		background-color: $color-steel-deep-4;
 
 		.hero__inner {
 			min-height: 150px;
 		}
+	}
+	&--signup {
+		margin-bottom: 0;
+	}
+	&--approved {
+		background-color: $color-green-4;
 	}
 	&__content {
 		position: relative;

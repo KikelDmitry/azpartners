@@ -1,0 +1,81 @@
+.modal {
+	&-dialog {
+		max-width: 600px;
+	}
+	&-content {
+		padding: 10px 15px;
+
+		@include media-breakpoint-up(sm) {
+			padding: 20px 35px;
+		}
+	}
+	&-header,
+	&-body,
+	&-footer {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	&-header {
+		padding-top: 0;
+		border: 0;
+	}
+	&-title {
+		font-size: 24px;
+		font-weight: 800;
+	}
+	&-body {
+	}
+	&-footer {
+		border: 0;
+		padding-bottom: 0;
+	}
+	&-ok {
+		flex: 0 0 auto;
+		width: 120px;
+		height: 56px;
+		border: 0;
+		background-color: transparent;
+		color: $color-steel-2;
+		border: 3px solid $color-steel-8;
+		border-radius: 5px;
+		font-size: 22px;
+		transition: background-color 200ms;
+
+		&:hover {
+			background-color: $color-steel-8;
+		}
+	}
+	.close {
+		position: absolute;
+		top: 13px;
+		right: 15px;
+		color: rgba(0, 0, 0, 0.2);
+	}
+}
+#registration-success {
+	.reg {
+		&-icon {
+			color: $color-green-10;
+			font-size: 46px;
+			margin-right: 10px;
+		}
+		&-state {
+			flex: 1 1 auto;
+			padding: 7px 18px;
+			border: 2px solid $color-green-12;
+			color: $color-green-5;
+			border-radius: 5px;
+		}
+		&-descr {
+			flex: 1 1 auto;
+			margin-right: 15px;
+
+			@include media-breakpoint-up(sm) {
+				margin-right: 45px;
+			}
+			@include media-breakpoint-up(md) {
+				margin-left: 72px;
+			}
+		}
+	}
+}

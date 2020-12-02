@@ -1,9 +1,16 @@
-.modal.fade#test-modal(role="dialog" tabindex="-1" aria-hidden="true")
-	.modal-dialog(role="document")
-		.modal-content
-			.modal-header
-				h5.modal-title Test modal
-				button.close(type="button" data-dismiss="modal" aria-label="Close")
-					span(aria-hidden="true") &times;
-			.modal-body
-				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sapiente sit, necessitatibus tempora id quia rerum repellendus adipisci illum, neque deserunt vitae doloremque nisi architecto cumque. Accusantium inventore architecto magnam nulla, facere ex maiores facilis quasi laborum vitae doloremque quis et sunt optio aperiam sapiente cumque molestiae. Iste aliquid ex esse corrupti illo dolorum fugit accusantium. Natus quis exercitationem illo molestiae? Natus itaque distinctio sit repellat at iure magni praesentium perspiciatis blanditiis eius. Eos iusto, deserunt reiciendis ipsa distinctio dicta ipsum repudiandae? Id enim quam voluptatibus laborum adipisci odit voluptate sequi non ab corrupti, molestiae ullam ea facere expedita eveniet?
+.modal-container
+	.modal.fade#registration-success(role="dialog" tabindex="-1" aria-hidden="true")
+		.modal-dialog(role="document")
+			.modal-content
+				.modal-header
+					h5.modal-title Success!
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") &times;
+				.modal-body
+					.d-flex
+						i.reg-icon.icon-yes
+						span.reg-state Registration completed successfully.
+				.modal-footer
+					.d-flex.align-items-center
+						.reg-descr Please wait for the confirmation email link.
+						button.modal-ok(type="button" data-dismiss="modal") Ok

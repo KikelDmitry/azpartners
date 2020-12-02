@@ -1,0 +1,17 @@
+extends /_layout/auth.pug
+
+block append meta
+	- config.page.title = 'Email confirmed';
+	- config.page.description = 'Email confirmed page description';
+
+	-
+		var hero = {
+			classPostfix: 'approved',
+			title: 'Email confirmation',
+			subtitle: 'Content delivery and monetization solutions.',
+		}
+
+block content
+	.success-container
+		i.success-container__icon.icon-yes
+		span.success-container__title Email address confirmed successfully.

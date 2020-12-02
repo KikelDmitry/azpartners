@@ -1,0 +1,16 @@
+.success-container {
+	display: flex;
+	align-items: center;
+	border: 2px solid $color-green-12;
+	border-radius: 5px;
+	padding: 22px 26px;
+	
+	&__icon {
+		margin-right: 22px;
+		color: $color-green-10;
+		font-size: 48px;
+	}
+	&__title {
+		font-weight: 600;
+	}
+}

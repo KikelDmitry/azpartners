@@ -1,17 +1,10 @@
 extends /_layout/base.pug
 
 block meta
-	- var template = 'light';
+	- config.tmp = 'light';
 
 block hero
-	section.hero.hero--light(class=(hero.classPostfix ? 'hero--' + hero.classPostfix : ''))
-		.container
-			.hero__inner.row.align-items-center
-				.col-12.col-xl-8
-					h1.hero__title.title-1 #{hero.title}
-			.hero__subtitle
-				.container #{hero.subtitle}
-		.hero__bg
+	include /_includes/hero.pug
 
 block text
 	.main__content
