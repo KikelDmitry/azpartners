@@ -20,8 +20,18 @@ body {
 }
 .title-2 {
 	font-family: $exo;
-	font-size: 32px;
+	font-size: 20px;
 	font-weight: 700;
+
+	@include media-breakpoint-up(md) {
+		font-size: 25px;
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: 30px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 32px;
+	}
 }
 .btn {
 	display: flex;
@@ -34,26 +44,38 @@ body {
 
 	i {
 		flex: 0 0 auto;
-		width: 80px;
+		width: 64px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		background-color: rgba(96, 125, 139, 0.25);
 		color: $color-amber-12;
-		font-size: 30px;
+		font-size: 24px;
 		transition: inherit;
+		
+		@include media-breakpoint-up(xl) {
+			width: 80px;
+			font-size: 30px;
+		}
 	}
 	span {
 		flex: 1 1 auto;
 		display: flex;
 		align-items: center;
-		padding-left: 23px;
+		padding-left: 20px;
 		padding-right: 36px;
-		font-size: 28px;
+		font-size: 20px;
 		font-weight: 600;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		transition: inherit;
+		
+		@include media-breakpoint-up(md) {
+			font-size: 22px;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 28px;
+		}
 	}
 	&:hover {
 		border-color: $color-steel-9;

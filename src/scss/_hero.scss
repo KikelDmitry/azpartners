@@ -23,6 +23,13 @@
 				min-height: 250px;
 			}
 		}
+		.hero__top {
+			padding: 16px 0 30px;
+
+			@include media-breakpoint-up(sm) {
+				padding: 35px 0;
+			}
+		}
 		.hero__content {
 			background: transparent;
 		}
@@ -39,15 +46,6 @@
 
 			@include media-breakpoint-up(lg) {
 				margin-bottom: 0;
-			}
-		}
-		.hero__subtitle {
-			font-size: 16px;
-			@include media-breakpoint-up(md) {
-				font-size: 20px;
-			}
-			@include media-breakpoint-up(lg) {
-				font-size: 24px;
 			}
 		}
 	}
@@ -117,17 +115,14 @@
 	}
 	&__top {
 		position: relative;
-		padding: 16px 0 30px;
-
-		@include media-breakpoint-up(sm) {
-			padding: 35px 0;
-		}
 
 		@include media-breakpoint-up(lg) {
 			min-height: 200px;
 		}
 
 		.hero__inner {
+			padding: 10px 0 20px;
+
 			@include media-breakpoint-up(lg) {
 				min-height: 200px;
 			}
@@ -144,6 +139,12 @@
 		background-repeat: no-repeat;
 		background-position: center 63%;
 		background-size: cover;
+
+		@include media-breakpoint-down(xs) {
+			background-color: $color-steel-deep-2;
+			background-image: none !important;
+			opacity: 1;
+		}
 	}
 	&__title {
 		line-height: 125%;
@@ -153,10 +154,27 @@
 		color: $color-steel-9;
 		line-height: 125%;
 		font-weight: 500;
+		font-size: 16px;
+
+		@include media-breakpoint-up(md) {
+			font-size: 20px;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: 24px;
+		}
 	}
 	&__link {
-		height: 90px;
+		max-width: 222px;
+		height: 72px;
+		margin-top: 10px;
 
+		@include media-breakpoint-up(sm) {
+			margin: 0;
+		}
+		@include media-breakpoint-up(xl) {
+			max-width: none;
+			height: 90px;
+		}
 		&-icon {
 		}
 		&-title {
@@ -214,21 +232,35 @@
 }
 .hero-promo {
 	position: relative;
-	height: 205px;
+	height: 155px;
 	display: flex;
-
+	margin-top: 10px;
+	
+	@include media-breakpoint-up(lg) {
+		margin-top: 0;
+		height: 205px;
+	}
 	&__title {
 		position: absolute;
 		top: 0;
 		left: 0;
-		// width: calc(75% + 34px);
-		line-height: 1;
+		line-height: 120%;
 		margin: 0;
+
+		@include media-breakpoint-up(lg) {
+			line-height: 1;
+		}
 	}
 	&__icon {
-		width: 160px;
-		height: 160px;
-		margin: auto auto 0 auto;
+		margin: auto;
+		width: 105px;
+		height: 105px;
+
+		@include media-breakpoint-up(lg) {
+			width: 160px;
+			height: 160px;
+			margin-bottom: 0;
+		}
 	}
 }
 .community-group {

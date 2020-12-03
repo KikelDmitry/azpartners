@@ -29,10 +29,10 @@ if config.tmp == 'promo'
 					.hero__top
 						.container
 							.hero__inner.row.align-items-center
-								.col-12.col-xl-8
+								.col-12.col-sm-7.col-md-8
 									h1.hero__title.title-1 #{hero.title}
 									.hero__subtitle #{hero.subtitle}
-								.col-12.col-md-6.col-xl-4
+								.col-12.col-sm-5.col-md-4
 									a.hero__link.btn(href=hero.button.link)
 										i.icon-apply
 										span.hero__link-title #{hero.button.title}
@@ -41,7 +41,7 @@ if config.tmp == 'promo'
 						.container
 							.hero__inner.row.align-items-center
 								each item in hero.icons
-									.col-12.col-xl-4
+									.col-12.col-sm-4
 										.hero-promo
 											h2.hero-promo__title.title-2 #{item.title}
 											.hero-promo__icon
