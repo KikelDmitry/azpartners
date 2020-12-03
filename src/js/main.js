@@ -23,3 +23,21 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 })
 
+// hero video
+document.addEventListener('DOMContentLoaded', function() {
+	if(window.innerWidth >= 1024) {
+		let video = document.querySelector('.hero__video');
+		if(video !== null) {
+			let webm = document.createElement('source');
+			webm.src = '/video/world.webm';
+			webm.type =  'video/webm';
+			video.append(webm);
+			let mp4 = document.createElement('source');
+			mp4.src = '/video/world2.mp4';
+			mp4.type = 'video/mp4';
+			video.append(mp4);
+		}
+	}
+})
+
+// mobile menu

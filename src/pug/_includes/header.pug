@@ -20,17 +20,23 @@
 header.header
 	.container
 		.header__inner.row.align-items-center
-			.col-12.col-xl-4
+			.col.col-md-6.col-lg-4
 				a.header__logo(href="/")
 					img(src="/img/logo.svg" alt="azparnters logo")
-			.col-12.col-xl-5
+			.col-auto.col-lg-5
 				nav.header__menu.main-menu
 					ul.main-menu__list.list-unstyled
 						each item in headerMenu
 							li.main-menu__item
 								a.main-menu__link(href=item.url) #{item.title}
-			.col-12.col-xl-3
+			.col-auto.ml-auto.col-lg-3
 				.header__login.header-login
 					a.header-login__link(href="/signin.html")
 						i.header-login__icon.icon-sign-in
 						span.header-login__title Sign in
+			.col-auto.pl-0.d-lg-none
+				button.header__burger(type="button")
+					svg(width="24" height="20" viewBox="0 0 24 20" fill="none")
+						rect(y="0.5" width="24" height="3" rx="1.5" fill="#76919A")/
+						rect(y="8.5" width="24" height="3" rx="1.5" fill="#76919A")/
+						rect(y="16.5" width="24" height="3" rx="1.5" fill="#76919A")/

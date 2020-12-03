@@ -1,6 +1,9 @@
 .hero {
-	min-height: 500px;
 	color: $color-white;
+
+	@include media-breakpoint-up(lg) {
+		min-height: 500px;
+	}
 
 	// home page
 	&--home {
@@ -10,23 +13,42 @@
 		overflow: hidden;
 
 		.hero__inner {
-			min-height: 250px;
+			@include media-breakpoint-up(lg) {
+				min-height: 250px;
+			}
 		}
 		.hero__top,
 		.hero__bottom {
-			min-height: 250px;
+			@include media-breakpoint-up(lg) {
+				min-height: 250px;
+			}
 		}
 		.hero__content {
 			background: transparent;
 		}
 		.hero__bottom {
 			background-color: rgba(49, 77, 85, 0.5);
+			padding-top: 20px;
+
+			@include media-breakpoint-up(lg) {
+				padding-top: 0;
+			}
 		}
 		.hero__title {
-			margin-bottom: 0;
+			margin-bottom: 10px;
+
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 0;
+			}
 		}
 		.hero__subtitle {
-			font-size: 24px;
+			font-size: 16px;
+			@include media-breakpoint-up(md) {
+				font-size: 20px;
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: 24px;
+			}
 		}
 	}
 
@@ -95,10 +117,20 @@
 	}
 	&__top {
 		position: relative;
-		min-height: 200px;
+		padding: 16px 0 30px;
+
+		@include media-breakpoint-up(sm) {
+			padding: 35px 0;
+		}
+
+		@include media-breakpoint-up(lg) {
+			min-height: 200px;
+		}
 
 		.hero__inner {
-			min-height: 200px;
+			@include media-breakpoint-up(lg) {
+				min-height: 200px;
+			}
 		}
 	}
 	&__bg {
@@ -132,26 +164,52 @@
 		}
 	}
 	&__bottom {
-		min-height: 300px;
 		background-color: $grad-gray;
 		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 50%);
 		background-blend-mode: overlay, normal;
 
-		.hero__inner {
+		@include media-breakpoint-up(lg) {
 			min-height: 300px;
+		}
+
+		.hero__inner {
+			@include media-breakpoint-up(lg) {
+				min-height: 300px;
+			}
 		}
 	}
 	&__video {
 		position: absolute;
-		top: 0;
-		left: -5%;
 		right: 0;
 		bottom: 0;
 		z-index: 1;
-		width: 130%;
-		height: 100%;
+		left: 0%;
+		top: -13%;
+		z-index: 1;
+		width: 231%;
+		height: 149%;
 		object-fit: cover;
 		opacity: 0.33;
+
+		@include media-breakpoint-up(sm) {
+			top: 0;
+			left: -5%;
+		}
+		@include media-breakpoint-up(md) {
+			left: 0;
+			width: 165%;
+			height: 107%;
+		}
+		@include media-breakpoint-up(lg) {
+			left: -7%;
+			width: 183%;
+			height: 159%;
+		}
+		@include media-breakpoint-up(xl) {
+			left: -5%;
+			width: 140%;
+			height: 123%;
+		}
 	}
 }
 .hero-promo {
@@ -177,6 +235,11 @@
 	position: relative;
 	transition-property: background-color, border-color;
 	transition-duration: 250ms;
+	margin-bottom: 20px;
+
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 0;
+	}
 
 	&--developers {
 		.community-group__icon {
@@ -253,18 +316,27 @@
 		}
 	}
 	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: absolute;
 		top: -30px;
 		left: 0;
-		width: 90px;
-		height: 90px;
-		padding: 22px 15px;
+		width: 72px;
+		height: 72px;
+		padding: 10px;
 		border-radius: 5px;
-		font-size: 46px;
+		font-size: 36px;
 		transition: inherit;
+
+		@include media-breakpoint-up(md) {
+			width: 90px;
+			height: 90px;
+			font-size: 46px;
+		}
 	}
 	&__title {
-		height: 90px;
+		height: 72px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -273,10 +345,18 @@
 		border: 3px solid transparent;
 		border-radius: 5px;
 		font-weight: 500;
-		font-size: 24px;
+		font-size: 20px;
 		line-height: 105%;
 		letter-spacing: -0.01em;
 		transition: inherit;
+
+		@include media-breakpoint-up(md) {
+			height: 90px;
+			font-size: 22px;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: 24px;
+		}
 
 		&:hover {
 			color: inherit;

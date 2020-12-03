@@ -3,11 +3,12 @@
 		section.advantages__item.advantage(class=(adv.type == 'rtl' ? 'advantage--rtl' : '') class=(adv.color ? 'advantage--' + adv.color : ''))
 			.container
 				.advantage__inner.row.align-items-center
-					.col-4
+					.d-none.d-sm-block.col-sm-5.col-md-4
 						h2.advantage__title.title-2 #{adv.title}
-					.col-4
+					.d-none.d-md-block.col-md-4
 						.advantage__descr #{adv.descr}
-					.col-4
+					.col-12.col-sm-7.col-md-4
 						.advantage__icon
-							//- img(src="/img/" + adv.icon + ".svg", alt=adv.title)
+							h2.advantage__title--mob.title-2 #{adv.title}
 							+svg(false, adv.icon, false, adv.title + ' icon')
+							.advantage__descr--mob #{adv.descr}
