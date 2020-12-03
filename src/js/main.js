@@ -41,3 +41,22 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 // mobile menu
+function mobMenu() {
+	let burger = document.querySelector('.header__burger'),
+		menu = document.querySelector('.header__menu');
+
+	burger.addEventListener('click', function() {
+		if(!burger.classList.contains('is-active')) {
+			burger.classList.add('is-active')
+			menu.classList.add('is-active')
+		} else {
+			burger.classList.remove('is-active')
+			menu.classList.remove('is-active')
+
+		}
+	})
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+	mobMenu()
+})

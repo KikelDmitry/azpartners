@@ -25,10 +25,10 @@ header.header
 					img(src="/img/logo.svg" alt="azparnters logo")
 			.col-auto.col-lg-5
 				nav.header__menu.main-menu
-					ul.main-menu__list.list-unstyled
-						each item in headerMenu
-							li.main-menu__item
-								a.main-menu__link(href=item.url) #{item.title}
+						ul.main-menu__list.list-unstyled
+							each item in headerMenu
+								li.main-menu__item
+									a.main-menu__link.container.p-lg-0(href=item.url) #{item.title}
 			.col-auto.ml-auto.col-lg-3
 				.header__login.header-login
 					a.header-login__link(href="/signin.html")
