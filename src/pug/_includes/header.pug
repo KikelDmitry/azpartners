@@ -23,7 +23,7 @@ header.header
 			.col.col-md-6.col-lg-4
 				a.header__logo(href="/")
 					img(src="/img/logo.svg" alt="azparnters logo")
-			.col-auto.col-lg-5
+			.col-auto.col-lg-5.col-menu
 				nav.header__menu.main-menu
 						ul.main-menu__list.list-unstyled
 							each item in headerMenu
@@ -37,6 +37,6 @@ header.header
 			.col-auto.pl-0.d-lg-none
 				button.header__burger(type="button")
 					svg(width="24" height="20" viewBox="0 0 24 20" fill="none")
-						rect(y="0.5" width="24" height="3" rx="1.5" fill="#76919A")/
-						rect(y="8.5" width="24" height="3" rx="1.5" fill="#76919A")/
-						rect(y="16.5" width="24" height="3" rx="1.5" fill="#76919A")/
+						rect.burger-line(y="0.5" width="24" height="3" rx="1.5" fill="#76919A")/
+						rect.burger-line(y="8.5" width="24" height="3" rx="1.5" fill="#76919A")/
+						rect.burger-line(y="16.5" width="24" height="3" rx="1.5" fill="#76919A")/
