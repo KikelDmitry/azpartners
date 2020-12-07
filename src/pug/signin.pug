@@ -11,18 +11,32 @@ block append meta
 		}
 
 block content
-	form.form.form--signin
-		+formInput('Email', 'email', 'johndoe@gmail.com', 4, 8)
-		+formInput('Password', 'password', '', 4, 8)
-		+formInput('Confirm password', 'password', '', 4, 8)
+	form.form.form--signin.needs-validation(novalidate)
 		.form-group.row
 			.col-4
-			.col-8
-				input.custom-control-input(type="checkbox")
-				span Checkbox
+				label(for="form-email-signin") Email
+			.col-3
+				.input-group
+					input#form-email-signin(type="email" placeholder="johndoe@gmail.com" required)
+					i.icon-asterisk
 		.form-group.row
 			.col-4
-			.col-8
+				label(for="form-password-signin") Password
+			.col-3
+				.input-group
+					input#form-password-signin(type="password" required)
+					i.icon-asterisk
+		.form-group.row
+			.col-4
+			.col-3
+				label.input-group
+					input.sr-only#form-agreement-signin(type="checkbox" name="form-agreement-signin")
+					span.input-checkbox
+						i.icon-check
+					span.input-title Remember me
+		.form-group.row
+			.col-4
+			.col-3
 				button.btn(type="submit")
 					i.icon-sign-in
 					span Sign in

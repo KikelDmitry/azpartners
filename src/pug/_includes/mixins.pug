@@ -7,20 +7,3 @@ mixin svg(classes, anchor, title, desc)
 		if desc
 			desc=desc
 
-//- forms mixins
-mixin formInput(label, type, placeholder, labelWidth, inputWidth, required = true)
-	- var id = label.replace(' ', '-').toLowerCase();
-	.form-group.row
-		div(class="col-" + labelWidth)
-			label(for="form-" + id) #{label}
-		div(class="col-" + inputWidth)
-			input(type=type, placeholder=(type == 'password' ? false : placeholder), id="form-" + id, required=(required ? true : false), name=id)
-			i.icon-asterisk
-
-mixin formTextarea(label, placeholder, labelWidth, inputWidth)
-	- var id = label.replace(' ', '-').toLowerCase();
-	.form-group.row
-		div(class="col-" + labelWidth)
-			label(for="form-" + id) #{label}
-		div(class="col-" + inputWidth)
-			textarea(id="form-" + id, placeholder=placeholder, name=id)

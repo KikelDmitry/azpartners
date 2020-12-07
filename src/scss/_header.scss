@@ -8,14 +8,13 @@
 
 		@include media-breakpoint-up(md) {
 			min-height: 72px;
-
 		}
 	}
 	&__logo {
 		display: flex;
 		align-items: center;
 		height: 40px;
-		
+
 		@include media-breakpoint-up(md) {
 			height: 48px;
 		}
@@ -39,7 +38,7 @@
 	transform: translateY(calc(-100% - var(--top)));
 	transition-property: transform;
 	transition-duration: 300ms;
-	
+
 	@include media-breakpoint-up(md) {
 		--top: 72px;
 	}
@@ -61,7 +60,7 @@
 	.main-menu__item {
 		min-height: 50px;
 		border-bottom: 1px solid $color-steel-deep-2;
-		
+
 		@include media-breakpoint-up(lg) {
 			min-height: auto;
 			border: 0;
@@ -134,19 +133,23 @@
 
 	.burger-line {
 		transform-origin: center;
-		transition-property: transform, opacity;
+		transition-property: transform, opacity, fill;
 		transition-duration: 200ms;
 	}
 
 	&.is-active {
-		.burger-line:nth-of-type(1) {
-			transform: rotateZ(45deg) translateY(8px);
-		}
-		.burger-line:nth-of-type(2) {
-			opacity: 0;
-		}
-		.burger-line:nth-of-type(3) {
-			transform: rotateZ(-45deg) translateY(-8px);
+		.burger-line {
+			fill: $color-white;
+
+			&:nth-of-type(1) {
+				transform: rotateZ(45deg) translateY(8px);
+			}
+			&:nth-of-type(2) {
+				opacity: 0;
+			}
+			&:nth-of-type(3) {
+				transform: rotateZ(-45deg) translateY(-8px);
+			}
 		}
 	}
 }

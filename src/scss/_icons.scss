@@ -20,6 +20,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-check::before {
+  content: "\e90a";
+}
 .icon-no::before {
 	content: "\e908";
 }

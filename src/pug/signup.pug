@@ -44,8 +44,13 @@ block content
 			.tab-pane.fade(class=(tab.active ? 'show active' : '') id=title role="tabpanel" aria-labelledby=title)
 				.row
 					.col-12.col-xl-6
-						form.form
-								
+						.signup-options__form
+							if title == 'developer'
+								include /_includes/_forms/signup_dev.pug
+							else if title == 'publisher'
+								include /_includes/_forms/signup_pub.pug
+							else if title == 'advertiser'
+								include /_includes/_forms/signup_adv.pug
 					.col-12.col-xl-6
 						.signup-options__description(class="signup-options__description--" + title) !{tab.description}
 

@@ -42,6 +42,9 @@
 	}
 }
 .signup-options {
+	&__form {
+		padding-top: 35px;
+	}
 	&__description {
 		min-height: 520px;
 		padding: 36px 40px 36px 50px;

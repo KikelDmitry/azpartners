@@ -1,0 +1,44 @@
+form.form.form--signup.form--dev.needs-validation(novalidate)
+	.form-group.row
+		.col-4
+			label(for="form-email-dev") Email
+		.col-6
+			.input-group
+				input#form-email-dev(type="email" placeholder="johndoe@gmail.com" required name="form-email-dev")
+				i.icon-asterisk
+	.form-group.row
+		.col-4
+			label(for="form-password-dev") Password
+		.col-6
+			.input-group
+				input#form-password-dev(type="password" required name="form-password-dev")
+				i.icon-asterisk
+	.form-group.row
+		.col-4
+			label(for="form-confirm-password-dev") Confirm password
+		.col-6
+			.input-group
+				input#form-confirm-password-dev(type="password" required name="form-confirm-password-dev")
+				i.icon-asterisk
+	.form-group.row
+		.col-4
+		.col-6
+			.recaptcha-block
+				img(src="/img/recaptcha.png", alt="recaptcha placeholder")
+	.form-group.row
+		.col-4
+		.col-6
+			label.input-group
+				input.sr-only#form-agreement-dev(type="checkbox" required name="form-agreement-dev")
+				span.input-checkbox
+					i.icon-check
+				span.input-title I agree with 
+					a(href="/privacy.html") privacy policy.
+
+	.form-group.row
+		.col-4
+		.col-6
+			button.btn(type="submit")
+				i.icon-apply
+				span Sign up
+

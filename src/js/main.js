@@ -3,11 +3,19 @@ let forms = document.querySelectorAll('.form');
 forms.forEach((form) => {
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
-		if (form.checkValidity() === false) {
-
-		}
+		e.stopPropagation();
 		form.classList.add('was-validated');
-		$('#registration-success').modal('show')
+
+		if (!form.checkValidity()) {
+			alert('invalid')
+		} else {
+			if (form.classList.contains('form--signup')) {
+				$('#registration-success').modal('show')
+			} else {
+				alert('Form submitted')
+			}
+			
+		}
 	})
 })
 
