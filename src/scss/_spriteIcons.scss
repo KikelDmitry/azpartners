@@ -1,0 +1,71 @@
+.gradient-border {
+	// --grad-color-1: red;
+	// --grad-color-2: blue;
+	// --bg-color: inherit;
+	color: $color-white;
+	position: relative;
+	width: 106px;
+	height: 106px;
+	border-radius: 8px;
+	background-image: linear-gradient(to bottom, var(--grad-color-1), var(--grad-color-2));
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		bottom: 20px;
+		background-color: var(--bg-color, white);
+		
+		@include media-breakpoint-up(md) {
+			top: 23px;
+			left: 23px;
+			right: 23px;
+			bottom: 23px;
+			
+		}
+		@include media-breakpoint-up(lg) {
+			top: 30px;
+			left: 30px;
+			right: 30px;
+			bottom: 30px;
+
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		width: 122px;
+		height: 122px;
+	}
+	@include media-breakpoint-up(lg) {
+		width: 160px;
+		height: 160px;
+	}
+
+	svg {
+		// max-width: none;
+		// max-height: none;
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		overflow: visible;
+	}
+}
+
+//icon dimensions fixes
+#icon {
+	&-new-impressions {
+		transform: translateX(-9px);
+	}
+	&-industry-expierence-since {
+		&_amber,
+		&_green,
+		&_violet {
+			width: 186px;
+			transform: translateX(-25px);
+		} 
+	}
+}

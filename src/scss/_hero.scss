@@ -230,7 +230,11 @@
 		}
 	}
 }
+
 .hero-promo {
+	--grad-color-1: #{$color-steel-deep-4};
+	--grad-color-2: rgba(66, 94, 102, 0);
+	--bg-color: #37535b;
 	position: relative;
 	height: 155px;
 	display: flex;
@@ -244,6 +248,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		z-index: 3;
 		line-height: 120%;
 		margin: 0;
 

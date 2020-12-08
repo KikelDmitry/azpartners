@@ -18,7 +18,7 @@
 		border-radius: 0;
 		color: $color-steel-3;
 		transition: border-color 200ms;
-		
+
 		&::placeholder {
 			color: $color-steel-6;
 		}
@@ -82,11 +82,11 @@
 
 		transition-property: background-color;
 		transition-duration: 200ms;
-		
+
 		i {
 			font-size: 12px;
 			color: $color-white;
-			
+
 			transform: scale(1.4);
 			opacity: 0;
 			transition-property: opacity, transform;
@@ -96,7 +96,7 @@
 	input[type="checkbox"] {
 		&:checked + .input-checkbox {
 			background-color: $color-blue-6;
-			
+
 			i {
 				transform: scale(1);
 				opacity: 1;
@@ -154,6 +154,23 @@
 						background-color: $color-red-14;
 						color: $color-red-12;
 					}
+				}
+			}
+		}
+		.invalid-feedback {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-flow: row wrap;
+			padding: 12px 16px;
+			color: $color-red-10;
+			font-size: 15px;
+			border: 2px solid $color-red-12;
+			border-radius: 5px;
+
+			span {
+				&:not(:last-child) {
+					margin-right: 0.6em;
 				}
 			}
 		}

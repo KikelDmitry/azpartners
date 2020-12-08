@@ -7,14 +7,22 @@ forms.forEach((form) => {
 		form.classList.add('was-validated');
 
 		if (!form.checkValidity()) {
-			alert('invalid')
+			let invalids = form.querySelectorAll('input:invalid'),
+				feedback = form.querySelector('.invalid-feedback');
+			feedback.innerHTML = '';
+			invalids.forEach((invalid) => {
+				let label = invalid.labels[0].innerText;
+				let span = document.createElement('span');
+				span.append('Enter ' + label + '.');
+				feedback.append(span);
+			})
 		} else {
 			if (form.classList.contains('form--signup')) {
 				$('#registration-success').modal('show')
 			} else {
 				alert('Form submitted')
 			}
-			
+
 		}
 	})
 })
@@ -22,7 +30,7 @@ forms.forEach((form) => {
 
 
 // active menu item
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 	let menuItems = document.querySelectorAll('.main-menu__item');
 	menuItems.forEach((item) => {
 		if (item.querySelector('a').href == window.location.href) {
@@ -32,13 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 // hero video
-document.addEventListener('DOMContentLoaded', function() {
-	if(window.innerWidth >= 1024) {
+document.addEventListener('DOMContentLoaded', function () {
+	if (window.innerWidth >= 1024) {
 		let video = document.querySelector('.hero__video');
-		if(video !== null) {
+		if (video !== null) {
 			let webm = document.createElement('source');
 			webm.src = '/video/world.webm';
-			webm.type =  'video/webm';
+			webm.type = 'video/webm';
 			video.append(webm);
 			let mp4 = document.createElement('source');
 			mp4.src = '/video/world2.mp4';
@@ -53,8 +61,8 @@ function mobMenu() {
 	let burger = document.querySelector('.header__burger'),
 		menu = document.querySelector('.header__menu');
 
-	burger.addEventListener('click', function() {
-		if(!burger.classList.contains('is-active')) {
+	burger.addEventListener('click', function () {
+		if (!burger.classList.contains('is-active')) {
 			burger.classList.add('is-active')
 			menu.classList.add('is-active')
 		} else {
@@ -65,6 +73,6 @@ function mobMenu() {
 	})
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 	mobMenu()
 })

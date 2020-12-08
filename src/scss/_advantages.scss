@@ -3,6 +3,10 @@
 	}
 }
 .advantage {
+	--grad-color-1: #{$grad-white-stroke};
+	--grad-color-2: #{$color-white};
+	--bg-color: #{$color-white};
+
 	@include media-breakpoint-up(sm) {
 		background-size: 30% 100%;
 		background-repeat: no-repeat;
@@ -78,17 +82,17 @@
 			justify-content: center;
 		}
 
-		svg {
-			max-width: 120px;
-			max-height: 120px;
-			margin-bottom: 10px;
+		// svg {
+		// 	max-width: 120px;
+		// 	max-height: 120px;
+		// 	margin-bottom: 10px;
 
-			@include media-breakpoint-up(sm) {
-				margin-bottom: 0;
-				max-width: 160px;
-				max-height: 160px;
-			}
-		}
+		// 	@include media-breakpoint-up(sm) {
+		// 		margin-bottom: 0;
+		// 		max-width: 160px;
+		// 		max-height: 160px;
+		// 	}
+		// }
 	}
 
 	// direction
@@ -122,18 +126,31 @@
 
 	// colors
 	&--light-gray {
-		background-image: linear-gradient(to right, $color-steel-85, $color-steel-85);
+		--grad-color-1: #{$grad-gray-stroke};
+		--grad-color-2: #{$color-steel-8};
+		--bg-color: #{$color-steel-8};
+
 		background-color: $color-steel-8;
 
+		@include media-breakpoint-up(sm) {
+			background-image: linear-gradient(to right, $color-steel-85, $color-steel-85);
+		}
 		.advantage__title {
 			background-color: $color-steel-85;
 			border-color: $color-steel-85;
 		}
 	}
 	&--dark-gray {
-		background-image: linear-gradient(to right, $color-steel-deep-4, $color-steel-deep-4);
+		--grad-color-1: #{$color-steel-deep-4};
+		--grad-color-2: #{$color-steel-deep-3};
+		--bg-color: #{$color-steel-deep-3};
+
 		background-color: $color-steel-deep-3;
 		color: $color-white;
+
+		@include media-breakpoint-up(sm) {
+			background-image: linear-gradient(to right, $color-steel-deep-4, $color-steel-deep-4);
+		}
 
 		.advantage__title {
 			background-color: $color-steel-deep-4;
@@ -141,9 +158,16 @@
 		}
 	}
 	&--amber {
-		background-image: linear-gradient(to right, $color-amber-5, $color-amber-5);
+		--grad-color-1: rgba(215, 191, 106, 0.5);
+		--grad-color-2: #{$gard-gold-dark};
+		--bg-color: #{$gard-gold-dark};
+
 		background-color: $color-amber-6;
 		color: $color-white;
+		
+		@include media-breakpoint-up(sm) {
+			background-image: linear-gradient(to right, $color-amber-5, $color-amber-5);
+		}
 
 		.advantage__title {
 			background-color: $color-amber-5;

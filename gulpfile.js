@@ -131,13 +131,19 @@ exports.images = images;
 
 const svgsprite = () => {
 	return src(globs.sprite)
-		// .pipe(svgmin({
-		// 	plugins: [
-		// 		{
-		// 			removeXMLNS: true
-		// 		},
-		// 	]
-		// }))
+		.pipe(svgmin({
+			plugins: [
+				{
+					removeXMLNS: true
+				},
+				{
+					removeViewBox: true
+				},
+				{
+					removeDimensions: false
+				},
+			]
+		}))
 		.pipe(gulpSvgSprite({
 			mode: {
 				defs: {

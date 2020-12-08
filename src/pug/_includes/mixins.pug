@@ -1,9 +1,10 @@
 //- svg sprite insert
 mixin svg(classes, anchor, title, desc)
-	svg(class=classes)
-		use(href="/img/sprite.svg#" + anchor)/
-		if title
-			title=title
-		if desc
-			desc=desc
+	.gradient-border
+		svg(class=classes, id="icon-" + anchor)
+			use(xlink:href="/img/sprite.svg#" + anchor)/
+			if title
+				title=title
+			if desc
+				desc=desc
 
