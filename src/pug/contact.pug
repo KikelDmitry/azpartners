@@ -13,6 +13,10 @@ block append meta
 
 block content
 	form.form.form--contact.needs-validation(novalidate)
+		.row
+			.col-2
+			.col-3
+				.invalid-feedback
 		.form-group.row
 			.col-2
 				label(for="form-email-contacts") Email
@@ -25,16 +29,13 @@ block content
 				label(for="form-name-contacts") Name
 			.col-3
 				.input-group
-					input#form-email-contacts(type="text" required name="form-name-contacts")
+					input#form-name-contacts(type="text" required name="form-name-contacts")
 					i.icon-asterisk
 		.form-group.row
 			.col-2
 				label(for="form-message-acontactsdv") Message
 			.col-8
 				textarea(id="form-message-contacts", placeholder="Hello there!", name="form-message-contacts")
-		//- +formInput('Email', 'email', 'johndoe@gmail.com', 2, 3)
-		//- +formInput('Name', 'text', 'John Doe', 2, 3)
-		//- +formTextarea('Message', 'Hello there!', 2, 8)
 		.form-group.row
 			.col-2
 			.col-3

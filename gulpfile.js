@@ -189,7 +189,7 @@ exports.build = series(
 		scripts,
 		images,
 		svgsprite,
-		copy
+		copy,
 	)
 );
 

@@ -2,39 +2,39 @@
 let forms = document.querySelectorAll('.form');
 forms.forEach((form) => {
 	form.addEventListener('submit', (e) => {
-		e.preventDefault();
-		e.stopPropagation();
-		form.classList.add('was-validated');
+		let invalids = form.querySelectorAll('input:invalid'),
+			feedback = form.querySelector('.invalid-feedback');
 
+		e.preventDefault();
+		form.classList.add('was-validated');
+		feedback.innerHTML = '';
+		
 		if (!form.checkValidity()) {
-			let invalids = form.querySelectorAll('input:invalid'),
-				feedback = form.querySelector('.invalid-feedback');
-			feedback.innerHTML = '';
 			invalids.forEach((invalid) => {
 				let label = invalid.labels[0].innerText;
 				let span = document.createElement('span');
 				span.append('Enter ' + label + '.');
+				feedback.classList.remove('sr-only');
 				feedback.append(span);
 			})
 		} else {
+			feedback.classList.add('sr-only');
 			if (form.classList.contains('form--signup')) {
-				$('#registration-success').modal('show')
+				$('#registration-success').modal('show');
 			} else {
-				alert('Form submitted')
+				alert('Form submitted');
 			}
 
 		}
 	})
 })
 
-
-
 // active menu item
 document.addEventListener('DOMContentLoaded', function () {
 	let menuItems = document.querySelectorAll('.main-menu__item');
 	menuItems.forEach((item) => {
 		if (item.querySelector('a').href == window.location.href) {
-			item.classList.add('is-active')
+			item.classList.add('is-active');
 		}
 	})
 })
@@ -63,16 +63,15 @@ function mobMenu() {
 
 	burger.addEventListener('click', function () {
 		if (!burger.classList.contains('is-active')) {
-			burger.classList.add('is-active')
-			menu.classList.add('is-active')
+			burger.classList.add('is-active');
+			menu.classList.add('is-active');
 		} else {
-			burger.classList.remove('is-active')
-			menu.classList.remove('is-active')
-
+			burger.classList.remove('is-active');
+			menu.classList.remove('is-active');
 		}
 	})
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-	mobMenu()
+	mobMenu();
 })
