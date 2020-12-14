@@ -10,40 +10,42 @@ block append meta
 			title: config.page.title,
 			subtitle: 'Content delivery and monetization solutions for software developers and web-masters.'
 		}
+	- var labelCol = 'col-12 col-sm-3 col-lg-2';
+	- var inputCol = 'col-12 col-sm-9 col-lg-3';
 
 block content
 	form.form.form--contact.needs-validation(novalidate)
 		.row
-			.col-2
-			.col-3
+			div(class=labelCol)
+			div(class=inputCol)
 				.invalid-feedback
 		.form-group.row
-			.col-2
+			div(class=labelCol)
 				label(for="form-email-contacts") Email
-			.col-3
+			div(class=inputCol)
 				.input-group
 					input#form-email-contacts(type="email" placeholder="johndoe@gmail.com" required name="form-email-contacts")
 					i.icon-asterisk
 		.form-group.row
-			.col-2
+			div(class=labelCol)
 				label(for="form-name-contacts") Name
-			.col-3
+			div(class=inputCol)
 				.input-group
 					input#form-name-contacts(type="text" required name="form-name-contacts")
 					i.icon-asterisk
 		.form-group.row
-			.col-2
+			div(class=labelCol)
 				label(for="form-message-acontactsdv") Message
-			.col-8
+			.col-12.col-sm-9.col-lg-8
 				textarea(id="form-message-contacts", placeholder="Hello there!", name="form-message-contacts")
 		.form-group.row
-			.col-2
-			.col-3
+			div(class=labelCol)
+			div(class=inputCol)
 				.recaptcha-block
 					img(src="/img/recaptcha.png", alt="recaptcha placeholder")
 		.form-group.row
-			.col-2
-			.col-3
+			div(class=labelCol)
+			div(class=inputCol)
 				button.btn(type="submit")
 					i.icon-send
 					span Send

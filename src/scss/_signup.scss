@@ -1,17 +1,50 @@
+.main {
+	&__content {
+		flex: 1 1 auto;
+		height: 100%;
+	}
+}
 .hero-tabs {
 	display: flex;
+	flex-direction: column;
+	margin: 24px 0 30px;
 	border: 3px solid $color-steel-8;
 	border-radius: 10px;
-	height: 72px;
 	overflow: hidden;
+
+	@include media-breakpoint-up(sm) {
+		flex-direction: row;
+		height: 72px;
+		margin: 0;
+	}
 
 	&__item {
 		flex: 1 1 auto;
-		max-width: 33.33%;
 		display: inherit;
+		height: 64px;
 
+		@include media-breakpoint-up(sm) {
+			max-width: 33.33%;
+			height: auto;
+		}
+		&:not(:first-child) {
+			.hero-tabs__link {
+				margin-top: 1px;
+
+				@include media-breakpoint-up(sm) {
+					margin-top: 0;
+				}
+			}
+		}
 		&:not(:last-child) {
-			border-right: 1px solid $color-steel-8;
+			.hero-tabs__link {
+				border-bottom: 1px solid $color-steel-8;
+	
+				@include media-breakpoint-up(sm) {
+					border-bottom: 0;
+					border-right: 1px solid $color-steel-8;
+				}
+			}
 		}
 	}
 	&__link {
@@ -19,7 +52,6 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		height: 100%;
 		text-align: center;
 		color: $color-white;
 
@@ -46,35 +78,64 @@
 		padding-top: 35px;
 	}
 	&__description {
-		min-height: 520px;
-		padding: 36px 40px 36px 50px;
+		height: 100%;
+		margin-left: -15px;
+		margin-right: -15px;
+		// padding: 26px 30px 36 30px;
+		padding-top: 26px;
+		padding-bottom: 30px;
 		color: $color-steel-9;
-		font-size: 20px;
+		font-size: 16px;
 		font-weight: 600;
 		line-height: 125%;
 		position: relative;
-
+		
+		@include media-breakpoint-up(sm) {
+			font-size: 18px;
+		}
+		@include media-breakpoint-up(md) {
+			padding: 36px 40px 36px 50px;
+			margin: 0;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 20px;
+		}
 		&--developer {
+			--back-color: #{$color-amber-1};
 			background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 52.6%);
-			background-color: $color-amber-1;
+			background-color: var(--back-color);
 		}
 		&--publisher {
+			--back-color: #{$color-violet-2};
 			background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 52.6%);
-			background-color: $color-violet-2;
+			background-color: var(--back-color);
 		}
 		&--advertiser {
+			--back-color: #{$color-green-2};
 			background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 52.6%);
-			background-color: $color-green-2;
+			background-color: var(--back-color);
 		}
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
-			top: 36px;
-			left: 0;
 			width: 0;
 			height: 0;
 			border: 14px solid transparent;
-			border-left-color: $color-white;
+			
+			left: 15px;
+			bottom: -28px;
+			border-top-color: var(--back-color);
+			
+			@include media-breakpoint-up(sm) {
+				left: 50px;
+			}
+			@include media-breakpoint-up(md) {
+				top: 36px;
+				left: 0;
+				bottom: auto;
+				border-top-color: transparent;
+				border-left-color: $color-white;
+			}
 		}
 	}
 }

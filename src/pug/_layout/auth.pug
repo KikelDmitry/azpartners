@@ -5,25 +5,8 @@ block meta
 
 block hero
 	include /_includes/hero.pug
-	//- signup/signin hero
-	//- section.hero.hero--thin
-		.container
-			.hero__inner.row.align-items-center
-				.col-12.col-xl-6
-					h1.hero__title.title-1 #{hero.title}
-					.hero__subtitle #{hero.subtitle}
-				//- sign up block only
-				if config.page.title == 'Sign up'
-					.col-12.col-xl-6
-						ul.hero__tabs.hero-tabs.nav.nav-tabs#sign-tabs-head(role="tablist")
-							each tab in hero.tabs
-
-								- var title = tab.title.toLowerCase();
-
-								li.hero-tabs__item.nav-item
-									a.hero-tabs__link(href="#" + title data-toggle="tab" class=("hero-tabs__link--" + title && tab.active ? 'active' : '') class="hero-tabs__link--" + title) #{tab.title}
 block text
 	.main__content
-		.container
+		.container-fluid.container-md
 			.content
 				block content

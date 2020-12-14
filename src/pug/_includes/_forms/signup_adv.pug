@@ -1,36 +1,36 @@
 form.form.form--signup.form--adv.needs-validation(novalidate)
 	.row
-		.col-4
-		.col-6
+		div(class=labelCol)
+		div(class=inputCol)
 			.invalid-feedback
 	.form-group.row
-		.col-4
+		div(class=labelCol)
 			label(for="form-email-adv") Email
-		.col-6
+		div(class=inputCol)
 			.input-group
 				input#form-email-adv(type="email" placeholder="johndoe@gmail.com" required)
 				i.icon-asterisk
 	.form-group.row
-		.col-4
+		div(class=labelCol)
 			label(for="form-name-adv") Name
-		.col-6
+		div(class=inputCol)
 			.input-group
 				input#form-name-adv(type="text"  required)
 				i.icon-asterisk
 	.form-group.row
-		.col-4
+		div(class=labelCol)
 			label(for="form-message-adv") Message
-		.col-6
+		div(class=inputCol)
 			textarea(id="form-message-adv", placeholder="Hello there!", name="form-message-adv")
 	.form-group.row
-		.col-4
-		.col-6
+		div(class=labelCol)
+		div(class=inputCol)
 			.recaptcha-block
 				img(src="/img/recaptcha.png", alt="recaptcha placeholder")
 
 	.form-group.row
-		.col-4
-		.col-6
+		div(class=labelCol)
+		div(class=inputCol)
 			button.btn(type="submit")
 				i.icon-send
 				span Send

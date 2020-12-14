@@ -10,6 +10,7 @@ forms.forEach((form) => {
 		feedback.innerHTML = '';
 		
 		if (!form.checkValidity()) {
+			//form invalid
 			invalids.forEach((invalid) => {
 				let label = invalid.labels[0].innerText;
 				let span = document.createElement('span');
@@ -18,7 +19,10 @@ forms.forEach((form) => {
 				feedback.append(span);
 			})
 		} else {
+			//form is valid
 			feedback.classList.add('sr-only');
+
+			//only for signup form
 			if (form.classList.contains('form--signup')) {
 				$('#registration-success').modal('show');
 			} else {

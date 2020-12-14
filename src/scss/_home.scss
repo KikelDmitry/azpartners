@@ -7,11 +7,23 @@
 	}
 	&__list {
 		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		padding: 0 20px;
+		flex-direction: column;
+
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		@include media-breakpoint-up(xl) {
+			padding: 0 20px;
+		}
 	}
 	&__item {
-		margin-right: 24px;
+		margin-bottom: 10px;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+			margin-right: 24px;
+		}
 	}
 }

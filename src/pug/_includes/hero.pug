@@ -19,6 +19,7 @@ if config.page.title == 'Home page'
 										i.community-group__icon(class="icon-" + item.toLowerCase())
 
 		video.hero__video(autoplay muted loop playsinline poster="/img/world_poster.jpg")
+			//- embeding by js
 			//- source(src="/video/world.webm" type="video/webm")
 			//- source(src="/video/world2.mp4" type="video/mp4")
 
@@ -65,13 +66,13 @@ if config.tmp == 'auth'
 	section.hero.hero--thin(class=(hero.classPostfix ? 'hero--' + hero.classPostfix : ''))
 		.container
 			.hero__inner.row.align-items-center
-				.col-12.col-xl-6
+				.col-12.col-sm-4.col-md-6
 					h1.hero__title.title-1 #{hero.title}
 					.hero__subtitle #{hero.subtitle}
 					
 				//- sign up block only
 				if config.page.title == 'Sign up'
-					.col-12.col-xl-6
+					.col-12.col-sm-8.col-md-6
 						ul.hero__tabs.hero-tabs.nav.nav-tabs#sign-tabs-head(role="tablist")
 							each tab in hero.tabs
 

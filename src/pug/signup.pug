@@ -33,10 +33,15 @@ block content
 		each tab in hero.tabs
 
 			- var title = tab.title.toLowerCase();
+			- var labelCol = 'col-12 col-sm-4';
+			- var inputCol = 'col-12 col-sm-6 col-md-7';
 
 			.tab-pane.fade(class=(tab.active ? 'show active' : '') id=title role="tabpanel" aria-labelledby=title)
-				.row
-					.col-12.col-xl-6
+				.row.flex-md-row-reverse
+					.col-12.col-md-5.col-lg-6
+						.signup-options__description(class="signup-options__description--" + title)
+							.container.p-md-0 !{tab.description}
+					.col-12.col-md-7.col-lg-6
 						.signup-options__form
 							if title == 'developer'
 								include /_includes/_forms/signup_dev.pug
@@ -44,7 +49,5 @@ block content
 								include /_includes/_forms/signup_pub.pug
 							else if title == 'advertiser'
 								include /_includes/_forms/signup_adv.pug
-					.col-12.col-xl-6
-						.signup-options__description(class="signup-options__description--" + title) !{tab.description}
 
 
