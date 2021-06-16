@@ -15,13 +15,13 @@ if config.page.title == 'Home page'
 							each item in hero.community
 								.col-12.col-lg-4
 									.community-group(class="community-group--" + item.toLowerCase())
-										a.community-group__title(href="/" + item.toLowerCase() + ".html") #{item}
+										a.community-group__title(href="" + item.toLowerCase() + ".html") #{item}
 										i.community-group__icon(class="icon-" + item.toLowerCase())
 
-		video.hero__video(autoplay muted loop playsinline poster="/img/world_poster.jpg")
+		video.hero__video(autoplay muted loop playsinline poster="img/world_poster.jpg")
 			//- embeding by js
-			//- source(src="/video/world.webm" type="video/webm")
-			//- source(src="/video/world2.mp4" type="video/mp4")
+			//- source(src="video/world.webm" type="video/webm")
+			//- source(src="video/world2.mp4" type="video/mp4")
 
 //- promo template
 if config.tmp == 'promo'

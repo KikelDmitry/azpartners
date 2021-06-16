@@ -2,27 +2,27 @@
 	var headerMenu = [
 		{
 			title: 'Developers',
-			url: '/developers.html',
+			url: 'developers.html',
 		},
 		{
 			title: 'Publishers',
-			url: '/publishers.html',
+			url: 'publishers.html',
 		},
 		{
 			title: 'Advertisers',
-			url: '/advertisers.html',
+			url: 'advertisers.html',
 		},
 		{
 			title: 'Contact Us',
-			url: '/contact.html',
+			url: 'contact.html',
 		},
 	];
 header.header
 	.container
 		.header__inner.row.align-items-center
 			.col.col-md-6.col-lg-4
-				a.header__logo(href="/")
-					img(src="/img/logo.svg" alt="azparnters logo")
+				a.header__logo(href="index.html")
+					img(src="img/logo.svg" alt="azparnters logo")
 			.col-auto.col-lg-5.col-menu
 				nav.header__menu.main-menu
 						ul.main-menu__list.list-unstyled
@@ -31,7 +31,7 @@ header.header
 									a.main-menu__link.container.p-lg-0(href=item.url) #{item.title}
 			.col-auto.ml-auto.col-lg-3
 				.header__login.header-login
-					a.header-login__link(href="/signin.html")
+					a.header-login__link(href="signin.html")
 						i.header-login__icon.icon-sign-in
 						span.header-login__title Sign in
 			.col-auto.pl-0.d-lg-none

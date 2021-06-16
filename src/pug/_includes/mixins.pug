@@ -2,7 +2,7 @@
 mixin svg(classes, anchor, title, desc)
 	.gradient-border
 		svg(class=classes, id="icon-" + anchor)
-			use(xlink:href="/img/sprite.svg#" + anchor)/
+			use(xlink:href="img/sprite.svg#" + anchor)/
 			if title
 				title=title
 			if desc
