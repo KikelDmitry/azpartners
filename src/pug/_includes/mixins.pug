@@ -7,3 +7,7 @@ mixin svg(classes, anchor, title, desc)
 				title=title
 			if desc
 				desc=desc
+
+//- icon mixin
+mixin icon(icon, attr)
+	i(class="icon-" + icon aria-hidden="true")&attributes(attr)
